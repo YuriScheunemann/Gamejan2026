@@ -21,9 +21,7 @@ public class BoatMoviment : MonoBehaviour
     }
     public void SlowSpeed(float slowSpeed)
     {
-        _speed -= slowSpeed;
-        print("slow" +  slowSpeed);
-        print(_speed);
+        _speed -= slowSpeed;        
     }
 
 }

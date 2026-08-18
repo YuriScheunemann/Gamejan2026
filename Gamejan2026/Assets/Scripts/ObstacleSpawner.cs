@@ -11,13 +11,12 @@ public class ObstacleSpawner : MonoBehaviour
     [SerializeField, Range(-9, 9)] private float leftRange;
     [SerializeField, Range(-9, 9)] private float rightRange;
     [SerializeField] private GameObject[] obstacleObjects;
-
-    [SerializeField]
-    private float spawnRate;
+    [SerializeField] private float spawnRate;
     private float spawnTime;
     private int obstaclesSpawnIndex;
 
-    [Header("Canes")]    
+    [Header("Canes")]
+    [SerializeField] private float spawnCaneTime;
     [SerializeField] private float spawnRateCane;
     private SpriteRenderer _spriteRendererCane;
     [SerializeField] private GameObject caneObjects;
@@ -34,16 +33,17 @@ public class ObstacleSpawner : MonoBehaviour
             }
 
         }
-        if (Time.time > spawnTime)
+        if (Time.time > spawnCaneTime)
         {
-            spawnCanePosition = Random.Range(0, 1);
+            spawnCaneTime = Time.time + spawnRateCane;
+            spawnCanePosition = Random.Range(0, 2);
             if (spawnCanePosition == 0)
             {
-                GameObject newCaneObject = Instantiate(caneObjects, new Vector2(Random.Range(-9, -9), verticalRange), Quaternion.identity);
+                GameObject newCaneObject = Instantiate(caneObjects, new Vector2(Random.Range(-8.7f, -8.7f), verticalRange), Quaternion.identity);
             }
             if (spawnCanePosition == 1)
             {
-                GameObject newCaneObject = Instantiate(caneObjects, new Vector2(Random.Range(9, 9), verticalRange), transform.rotation);
+                GameObject newCaneObject = Instantiate(caneObjects, new Vector2(Random.Range(8.7f, 8.7f), verticalRange), transform.rotation);
                 _spriteRendererCane = newCaneObject.GetComponent<SpriteRenderer>();
                 _spriteRendererCane.flipX = true;
             }

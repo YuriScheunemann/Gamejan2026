@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Drawing;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -40,10 +41,10 @@ public class ObstacleCollision : MonoBehaviour
             rigidbody2D.bodyType = RigidbodyType2D.Kinematic;     
             surfaceEffector2D.forceScale = 0;
             surfaceEffector2D.speed = 0;
-            boxCollider2D.isTrigger = true;
+            boxCollider2D.size = new Vector2(0.8f,1.8f);
             boatMoviment = GetComponentInParent<BoatMoviment>();
             boatMoviment.SlowSpeed(slowSpeed);
-            StartCoroutine(ObstacleDestroy());
+            StartCoroutine(ObstacleDestroy());          
         }
         
         if (collision.collider.CompareTag("Player") && Iscane)
