@@ -25,7 +25,6 @@ public class MouseGrab : MonoBehaviour
 
         Vector3 mousePosition = GetMouseWorldPosition();
 
-        // Mantém a distância entre o mouse e o objeto
         offset = transform.position - mousePosition;
     }
 
@@ -49,10 +48,8 @@ public class MouseGrab : MonoBehaviour
         Vector3 mousePosition = Input.mousePosition;
 
         // Mantém o objeto na mesma profundidade da câmera
-        mousePosition.z = Mathf.Abs(
-            mainCamera.transform.position.z - transform.position.z
-        );
-
+        mousePosition.z = Mathf.Abs(mainCamera.transform.position.z - transform.position.z);
+        mousePosition.x = Mathf.Abs(mainCamera.transform.position.x - transform.position.x); ;
         return mainCamera.ScreenToWorldPoint(mousePosition);
     }
 }
