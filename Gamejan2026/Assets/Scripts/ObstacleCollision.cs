@@ -10,6 +10,7 @@ public class ObstacleCollision : MonoBehaviour
     bool Iscane = false;
     private Rigidbody2D rigidbody2D;
     private SurfaceEffector2D surfaceEffector2D;
+    private BoxCollider2D boxCollider2D;
     BoatMoviment boatMoviment;
     float slowSpeed = 0;
     public enum IndexSpawn
@@ -23,6 +24,7 @@ public class ObstacleCollision : MonoBehaviour
         SetState(newindex: (IndexSpawn)obstacleIndex);
         rigidbody2D = GetComponent<Rigidbody2D>();
         surfaceEffector2D = GetComponent<SurfaceEffector2D>();
+        boxCollider2D = GetComponent<BoxCollider2D>();
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -35,12 +37,10 @@ public class ObstacleCollision : MonoBehaviour
             gameObject.transform.SetParent(collision.collider.transform);
             rigidbody2D.gravityScale = 0;
             rigidbody2D.linearVelocity = Vector2.zero;
-            rigidbody2D.bodyType = RigidbodyType2D.Kinematic;
-            rigidbody2D = null;          
-           /* rigidbody2D.position.Set(0, 0);
-            rigidbody2D.freezeRotation = true;*/
+            rigidbody2D.bodyType = RigidbodyType2D.Kinematic;     
             surfaceEffector2D.forceScale = 0;
             surfaceEffector2D.speed = 0;
+            boxCollider2D.isTrigger = true;
             boatMoviment = GetComponentInParent<BoatMoviment>();
             boatMoviment.SlowSpeed(slowSpeed);
             StartCoroutine(ObstacleDestroy());
