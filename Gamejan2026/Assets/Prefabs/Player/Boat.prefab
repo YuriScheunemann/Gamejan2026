@@ -80,7 +80,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1536056941
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.5660378, g: 0.35014603, b: 0.1308295, a: 1}
@@ -151,6 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5833d36be0e2c8c42b9a65aace6034ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoatMoviment
+  _sceneName: BoatGameOver
 --- !u!50 &7479677617838808543
 Rigidbody2D:
   serializedVersion: 5
