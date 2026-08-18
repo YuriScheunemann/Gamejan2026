@@ -12,10 +12,10 @@ public class TrashGameManager : MonoBehaviour
     [Tooltip("Máximo de erros permitidos antes do game over")]
     [SerializeField] private int maxAllowedErrors = 3;
 
-    [Header("Eventos (atribua no Inspector para reagir)")]
+    [Header("Eventos")]
     public UnityEvent OnUnlocked;
     public UnityEvent OnGameOver;
-    public UnityEvent OnScoreChanged; // disparado sempre que pontuação/erros mudarem
+    public UnityEvent OnScoreChanged;
 
     private int correctCount;
     private int errorCount;
@@ -42,7 +42,6 @@ public class TrashGameManager : MonoBehaviour
     public bool IsUnlocked => unlocked;
     public bool IsGameOver => gameOver;
 
-    // Registrar resultado de um descarte (true = correto, false = errado)
     public void RegisterResult(bool correct)
     {
         if (gameOver || unlocked)
@@ -50,37 +49,63 @@ public class TrashGameManager : MonoBehaviour
 
         if (correct)
         {
+            // Ganha ponto
             correctCount++;
-            Debug.Log($"TrashGameManager: Acerto! {correctCount}/{requiredCorrectToUnlock}.");
+
+            // Remove 1 erro, mas nunca deixa ficar abaixo de 0
+            if (errorCount > 0)
+            {
+                errorCount--;
+            }
+
+            Debug.Log(
+                $"TrashGameManager: Acerto! " +
+                $"Pontos: {correctCount} | Erros: {errorCount}"
+            );
+
             if (correctCount >= requiredCorrectToUnlock)
             {
                 unlocked = true;
-                Debug.Log("TrashGameManager: Objetivo atingido — desbloqueado!");
+
+                Debug.Log(
+                    "TrashGameManager: Objetivo atingido — desbloqueado!"
+                );
+
                 OnUnlocked?.Invoke();
             }
         }
         else
         {
             errorCount++;
-            Debug.Log($"TrashGameManager: Erro! {errorCount}/{maxAllowedErrors}.");
+
+            Debug.Log(
+                $"TrashGameManager: Erro! " +
+                $"{errorCount}/{maxAllowedErrors}"
+            );
+
             if (errorCount >= maxAllowedErrors)
             {
                 gameOver = true;
-                Debug.Log("TrashGameManager: Limite de erros atingido — game over.");
+
+                Debug.Log(
+                    "TrashGameManager: Limite de erros atingido — game over."
+                );
+
                 OnGameOver?.Invoke();
             }
         }
 
+        // Atualiza o HUD
         OnScoreChanged?.Invoke();
     }
 
-    // Reinicia estado (útil para botão de reiniciar)
     public void ResetProgress()
     {
         correctCount = 0;
         errorCount = 0;
         unlocked = false;
         gameOver = false;
+
         OnScoreChanged?.Invoke();
     }
 }

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: b19671b83f1eefa45a127c44c37bf3a1
+guid: 403fa0cb4b710084bb9b82cacd4211ff
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6703854655786615834
-    second: "Lixeira Recicl\xE1vel  (1)_0"
+      213: -6809091362060445767
+    second: SadEmoji_Test_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 128
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -72,7 +72,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 128
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "Lixeira Recicl\xE1vel  (1)_0"
+      name: SadEmoji_Test_0
       rect:
         serializedVersion: 2
-        x: 18
+        x: 0
         y: 0
-        width: 92
-        height: 108
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a1482087a40e80d50800000000000000
-      internalID: 6703854655786615834
+      spriteID: 9b7d4397b7f3181a0800000000000000
+      internalID: -6809091362060445767
       vertices: []
       indices: 
       edges: []
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "Lixeira Recicl\xE1vel  (1)_0": 6703854655786615834
+      SadEmoji_Test_0: -6809091362060445767
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

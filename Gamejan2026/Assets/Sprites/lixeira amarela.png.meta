@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 60302146986bc9e41903bd2f9fa860f9
+guid: 2155f0e176b67c74cb25adff38b5bd33
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5140665859762561575
-    second: Correct_Trash_Test_0
+      213: 4797496907447210363
+    second: lixeira amarela_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 1000
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Correct_Trash_Test_0
+      name: lixeira amarela_0
       rect:
         serializedVersion: 2
-        x: 24
-        y: 42
-        width: 205
-        height: 170
+        x: 118
+        y: 57
+        width: 236
+        height: 391
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9dddfdf03afa8a8b0800000000000000
-      internalID: -5140665859762561575
+      spriteID: b711d63e402249240800000000000000
+      internalID: 4797496907447210363
       vertices: []
       indices: 
       edges: []
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Correct_Trash_Test_0: -5140665859762561575
+      lixeira amarela_0: 4797496907447210363
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
