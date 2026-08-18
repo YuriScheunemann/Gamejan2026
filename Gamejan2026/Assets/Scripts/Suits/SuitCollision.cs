@@ -2,12 +2,9 @@ using UnityEngine;
 
 public class SuitCollision : MonoBehaviour
 {
-    SuitsManager suitsManager;
-    private void Start()
-    {
-        suitsManager = GetComponent<SuitsManager>();        ;
-    }
-    void OnTriggerEnter(Collider other)
+    [SerializeField] private SuitsManager suitsManager;
+  
+    void OnTriggerEnter2D(Collider2D other)
     {
         print("Trigger entered");
         if (other.GetComponent<MouseGrab>())
@@ -16,7 +13,7 @@ public class SuitCollision : MonoBehaviour
             print("less one");
         }
     }
-    void OnTriggerExit(Collider other)
+    void OnTriggerExit2D(Collider2D other)
     {
         if (other.GetComponent<MouseGrab>())
         {

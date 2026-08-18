@@ -7,6 +7,9 @@ public class SuitsManager : MonoBehaviour
     public void AllSuitsOnReach(int input)
     {
         inputsIndex += input;
+        if(inputsIndex != 4)
+            return;
+
         if (inputsIndex == 4) 
         {
             AllSuitsOn.Invoke();

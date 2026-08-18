@@ -269,6 +269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b25a636725063074f9e1720ac99d7db8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SuitCollision
+  suitsManager: {fileID: 934799267}
 --- !u!1 &158784162
 GameObject:
   m_ObjectHideFlags: 0
@@ -281,6 +282,7 @@ GameObject:
   - component: {fileID: 158784164}
   - component: {fileID: 158784163}
   - component: {fileID: 158784166}
+  - component: {fileID: 158784167}
   m_Layer: 0
   m_Name: Suit1 (2)
   m_TagString: Untagged
@@ -419,6 +421,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4911b22b35a10034d9532513336c109a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MouseGrab
+--- !u!50 &158784167
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 158784162}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &311183354
 GameObject:
   m_ObjectHideFlags: 0
@@ -877,6 +906,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b25a636725063074f9e1720ac99d7db8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SuitCollision
+  suitsManager: {fileID: 934799267}
 --- !u!1 &1457486903
 GameObject:
   m_ObjectHideFlags: 0
@@ -889,6 +919,7 @@ GameObject:
   - component: {fileID: 1457486905}
   - component: {fileID: 1457486904}
   - component: {fileID: 1457486907}
+  - component: {fileID: 1457486908}
   m_Layer: 0
   m_Name: Suit1 (3)
   m_TagString: Untagged
@@ -1027,6 +1058,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4911b22b35a10034d9532513336c109a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MouseGrab
+--- !u!50 &1457486908
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1457486903}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &1507283036
 GameObject:
   m_ObjectHideFlags: 0
@@ -1256,6 +1314,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b25a636725063074f9e1720ac99d7db8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SuitCollision
+  suitsManager: {fileID: 934799267}
 --- !u!1 &1730819927
 GameObject:
   m_ObjectHideFlags: 0
@@ -1268,6 +1327,7 @@ GameObject:
   - component: {fileID: 1730819929}
   - component: {fileID: 1730819928}
   - component: {fileID: 1730819931}
+  - component: {fileID: 1730819932}
   m_Layer: 0
   m_Name: Suit1
   m_TagString: Untagged
@@ -1406,6 +1466,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4911b22b35a10034d9532513336c109a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MouseGrab
+--- !u!50 &1730819932
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1730819927}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &1794077418
 GameObject:
   m_ObjectHideFlags: 0
@@ -1556,6 +1643,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b25a636725063074f9e1720ac99d7db8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SuitCollision
+  suitsManager: {fileID: 934799267}
 --- !u!1 &1947213708
 GameObject:
   m_ObjectHideFlags: 0
@@ -1603,6 +1691,7 @@ GameObject:
   - component: {fileID: 1959286600}
   - component: {fileID: 1959286599}
   - component: {fileID: 1959286602}
+  - component: {fileID: 1959286603}
   m_Layer: 0
   m_Name: Suit1 (1)
   m_TagString: Untagged
@@ -1741,6 +1830,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4911b22b35a10034d9532513336c109a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MouseGrab
+--- !u!50 &1959286603
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1959286598}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1001 &3539769730009292220
 PrefabInstance:
   m_ObjectHideFlags: 0
