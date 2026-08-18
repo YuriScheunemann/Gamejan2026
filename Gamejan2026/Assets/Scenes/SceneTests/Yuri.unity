@@ -283,6 +283,7 @@ GameObject:
   - component: {fileID: 158784163}
   - component: {fileID: 158784166}
   - component: {fileID: 158784167}
+  - component: {fileID: 158784168}
   m_Layer: 0
   m_Name: Suit1 (2)
   m_TagString: Untagged
@@ -448,6 +449,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &158784168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 158784162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3d113a0e71d18940aa4fa8c53ed3867, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IfSuitMove
+  suitsEnum: 2
 --- !u!1 &311183354
 GameObject:
   m_ObjectHideFlags: 0
@@ -920,6 +934,7 @@ GameObject:
   - component: {fileID: 1457486904}
   - component: {fileID: 1457486907}
   - component: {fileID: 1457486908}
+  - component: {fileID: 1457486909}
   m_Layer: 0
   m_Name: Suit1 (3)
   m_TagString: Untagged
@@ -1085,6 +1100,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1457486909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1457486903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3d113a0e71d18940aa4fa8c53ed3867, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IfSuitMove
+  suitsEnum: 3
 --- !u!1 &1507283036
 GameObject:
   m_ObjectHideFlags: 0
@@ -1328,6 +1356,8 @@ GameObject:
   - component: {fileID: 1730819928}
   - component: {fileID: 1730819931}
   - component: {fileID: 1730819932}
+  - component: {fileID: 1730819933}
+  - component: {fileID: 1730819934}
   m_Layer: 0
   m_Name: Suit1
   m_TagString: Untagged
@@ -1493,6 +1523,32 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1730819933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1730819927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3d113a0e71d18940aa4fa8c53ed3867, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IfSuitMove
+  suitsEnum: 0
+--- !u!114 &1730819934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1730819927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3d113a0e71d18940aa4fa8c53ed3867, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IfSuitMove
+  suitsEnum: 0
 --- !u!1 &1794077418
 GameObject:
   m_ObjectHideFlags: 0
@@ -1692,6 +1748,7 @@ GameObject:
   - component: {fileID: 1959286599}
   - component: {fileID: 1959286602}
   - component: {fileID: 1959286603}
+  - component: {fileID: 1959286604}
   m_Layer: 0
   m_Name: Suit1 (1)
   m_TagString: Untagged
@@ -1857,6 +1914,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1959286604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1959286598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3d113a0e71d18940aa4fa8c53ed3867, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IfSuitMove
+  suitsEnum: 1
 --- !u!1001 &3539769730009292220
 PrefabInstance:
   m_ObjectHideFlags: 0

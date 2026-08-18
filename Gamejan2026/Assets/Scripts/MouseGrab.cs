@@ -46,7 +46,6 @@ public class MouseGrab : MonoBehaviour
     private Vector3 GetMouseWorldPosition()
     {
         Vector3 mousePosition = Input.mousePosition;
-
         // Mantém o objeto na mesma profundidade da câmera
         mousePosition.z = Mathf.Abs(mainCamera.transform.position.z - transform.position.z);
         mousePosition.x = Mathf.Abs(mainCamera.transform.position.x - transform.position.x); ;

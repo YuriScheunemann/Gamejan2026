@@ -6,19 +6,16 @@ public class SuitCollision : MonoBehaviour
   
     void OnTriggerEnter2D(Collider2D other)
     {
-        print("Trigger entered");
         if (other.GetComponent<MouseGrab>())
         {
-            suitsManager.AllSuitsOnReach(1);
-            print("less one");
+            suitsManager.AllSuitsOnReach(1);           
         }
     }
     void OnTriggerExit2D(Collider2D other)
     {
         if (other.GetComponent<MouseGrab>())
         {
-            suitsManager.AllSuitsOnReach(-1);
-            print("More one");
+            suitsManager.AllSuitsOnReach(-1);           
         }
     }
 }
