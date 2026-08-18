@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -33,8 +34,11 @@ public class ObstacleCollision : MonoBehaviour
         {
             gameObject.transform.SetParent(collision.collider.transform);
             rigidbody2D.gravityScale = 0;
+            rigidbody2D.linearVelocity = Vector2.zero;
             rigidbody2D.bodyType = RigidbodyType2D.Kinematic;
-            rigidbody2D.gravityScale = 0;
+            rigidbody2D = null;          
+           /* rigidbody2D.position.Set(0, 0);
+            rigidbody2D.freezeRotation = true;*/
             surfaceEffector2D.forceScale = 0;
             surfaceEffector2D.speed = 0;
             boatMoviment = GetComponentInParent<BoatMoviment>();
