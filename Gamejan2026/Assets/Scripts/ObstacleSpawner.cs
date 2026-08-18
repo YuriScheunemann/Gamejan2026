@@ -18,7 +18,7 @@ public class ObstacleSpawner : MonoBehaviour
         {
             spawnTime = Time.time + spawnRate;
             spawnIndex = Random.Range(0, obstacleObjects.Length);
-            GameObject newCaneObject = Instantiate(obstacleObjects[spawnIndex], new Vector2(Random.Range(leftRange, rightRange), verticalRange), Quaternion.identity);
+            GameObject newObstacleObject = Instantiate(obstacleObjects[spawnIndex], new Vector2(Random.Range(leftRange, rightRange), verticalRange), Quaternion.identity);
         }
     } 
 }
