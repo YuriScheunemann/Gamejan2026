@@ -13,11 +13,11 @@ public class BoatMoviment : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        rb.linearVelocity = new Vector2(0, _moviment * _speed);
+        rb.linearVelocity = new Vector2(_moviment * _speed,0);
     }
 
     private void Update()
     {
-        _moviment = Input.GetAxis("Vertical");       
+        _moviment = Input.GetAxis("Horizontal");       
     }
 }
