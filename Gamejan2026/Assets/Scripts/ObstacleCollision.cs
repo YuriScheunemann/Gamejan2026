@@ -1,3 +1,5 @@
+using Unity.VisualScripting;
+using UnityEditor.Animations;
 using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -7,7 +9,8 @@ public class ObstacleCollision : MonoBehaviour
     [SerializeField] private string sceneName;
     [SerializeField] [Range(0, 2)] private int obstacleIndex;
     bool Iscane = false;
-
+    private Rigidbody2D rigidbody2D;
+    private SurfaceEffector2D surfaceEffector2D;
     public enum IndexSpawn
     {
         Cane,
@@ -17,6 +20,8 @@ public class ObstacleCollision : MonoBehaviour
     private void Start()
     {
         SetState(newindex: (IndexSpawn)obstacleIndex);
+        rigidbody2D = GetComponent<Rigidbody2D>();
+        surfaceEffector2D = GetComponent<SurfaceEffector2D>();
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -26,7 +31,14 @@ public class ObstacleCollision : MonoBehaviour
             Destroy(gameObject);
 
         if (collision.collider.CompareTag("Player") && !Iscane)
-            print("a");
+        {
+            gameObject.transform.SetParent(collision.collider.transform);
+            rigidbody2D.bodyType = RigidbodyType2D.Kinematic;
+            rigidbody2D.gravityScale = 0;
+            surfaceEffector2D.forceScale = 0;
+            surfaceEffector2D.speed = 0;            
+        }
+           
             //backgroundVelocity - velocityy
             //SceneManager.LoadScene(sceneName);
 
