@@ -48,8 +48,9 @@ MonoBehaviour:
   leftRange: -7.5
   rightRange: 7.5
   obstacleObjects:
-  - {fileID: 837500377220910736, guid: dba03ee867db1274fb1308d420abfb03, type: 3}
   - {fileID: 837500377220910736, guid: b7fee4cea7841a448a05d15225a97ae2, type: 3}
+  - {fileID: 837500377220910736, guid: b7fee4cea7841a448a05d15225a97ae2, type: 3}
+  - {fileID: 837500377220910736, guid: dba03ee867db1274fb1308d420abfb03, type: 3}
   spawnRate: 0.8
   spawnCaneTime: 0
   spawnRateCane: 1
