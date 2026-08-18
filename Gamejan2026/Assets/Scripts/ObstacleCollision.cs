@@ -25,8 +25,7 @@ public class ObstacleCollision : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        //BackgroundVelocity - velocityy
-        //boatVelocity - velocityy       
+        //BackgroundVelocity - velocityy       
         if (collision.collider.CompareTag("Destroyer"))
             Destroy(gameObject);
 
@@ -42,9 +41,7 @@ public class ObstacleCollision : MonoBehaviour
             boatMoviment.SlowSpeed(slowSpeed);
             StartCoroutine(ObstacleDestroy());
         }
-        //backgroundVelocity - velocityy
-
-
+        
         if (collision.collider.CompareTag("Player") && Iscane)
             SceneManager.LoadScene(sceneName);
     }
