@@ -1,3 +1,4 @@
+Assets\Scripts\TrashPuzzleScripts\TrashItem.cs
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -6,6 +7,8 @@ public class TrashItem : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, 
     public TrashType type;
     public float conveyorSpeed = 2f;
     public float fallGravityScale = 1f;
+    [Tooltip("Margem em viewport fora da qual o item é destruído")]
+    public float offscreenMargin = 0.1f;
 
     private Camera mainCamera;
     private bool isDragging;
@@ -16,7 +19,7 @@ public class TrashItem : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, 
     {
         mainCamera = Camera.main;
         if (mainCamera == null)
-            Debug.LogError("Main Camera nï¿½o encontrada. Marque a cï¿½mera como MainCamera (tag).");
+            Debug.LogError("Main Camera não encontrada. Marque a câmera como MainCamera (tag).");
 
         rb = GetComponent<Rigidbody2D>();
         if (rb == null)
@@ -33,10 +36,21 @@ public class TrashItem : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, 
 
     private void Update()
     {
-        // movimentaï¿½ï¿½o da esteira quando nï¿½o estï¿½ sendo arrastado e estï¿½ kinematic
+        // movimentação da esteira quando não está sendo arrastado e está kinematic
         if (!isDragging && rb.bodyType == RigidbodyType2D.Kinematic)
         {
             transform.Translate(Vector3.down * conveyorSpeed * Time.deltaTime);
+        }
+
+        // destruir caso saia da tela (viewport)
+        if (mainCamera != null)
+        {
+            Vector3 vp = mainCamera.WorldToViewportPoint(transform.position);
+            if (vp.x < -offscreenMargin || vp.x > 1f + offscreenMargin ||
+                vp.y < -offscreenMargin || vp.y > 1f + offscreenMargin)
+            {
+                Destroy(gameObject);
+            }
         }
     }
 
@@ -64,7 +78,7 @@ public class TrashItem : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, 
                 {
                     isDragging = true;
                     // garante comportamento non-physical enquanto arrasta
-                    rb.linearVelocity = Vector2.zero;
+                    rb.velocity = Vector2.zero;
                     rb.angularVelocity = 0f;
                     rb.bodyType = RigidbodyType2D.Kinematic;
 
@@ -84,14 +98,14 @@ public class TrashItem : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, 
         Vector3 mouseWorld = ScreenToWorld(eventData.position);
         mouseWorld.z = transform.position.z;
 
-        // Usar MovePosition para respeitar fï¿½sica kinematic
+        // Usar MovePosition para respeitar física kinematic
         if (rb != null)
             rb.MovePosition(mouseWorld + dragOffset);
         else
             transform.position = mouseWorld + dragOffset;
     }
 
-    // Ao soltar o botï¿½o, solta o objeto e ele passa a cair (physics)
+    // Ao soltar o botão, solta o objeto e ele passa a cair (physics)
     public void OnPointerUp(PointerEventData eventData)
     {
         if (isDragging)
@@ -101,18 +115,16 @@ public class TrashItem : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, 
     private void Drop()
     {
         isDragging = false;
-        // habilita fï¿½sica para cair
+        // habilita física para cair
         rb.bodyType = RigidbodyType2D.Dynamic;
-        // garante que a gravidade seja aplicada com a escala desejada
         rb.gravityScale = fallGravityScale;
-        // permita rotaï¿½ï¿½o se desejar; aqui mantemos congelada para estabilidade
         rb.freezeRotation = true;
 
-        // se jï¿½ estiver dentro de uma lixeira no momento do drop, checa imediatamente
+        // se já estiver dentro de uma lixeira no momento do drop, checa imediatamente
         CheckBin();
     }
 
-    // Checagem imediata (caso o item seja solto jï¿½ dentro da ï¿½rea da lixeira)
+    // Checagem imediata (caso o item seja solto já dentro da área da lixeira)
     private void CheckBin()
     {
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 0.5f);
@@ -123,7 +135,6 @@ public class TrashItem : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, 
 
             if (bin != null)
             {
-                // sempre entrega para a lixeira encontrada â€” a lixeira decide se Ã© correto e mostra feedback
                 bin.ReceiveTrash(this);
                 return;
             }
@@ -140,7 +151,7 @@ public class TrashItem : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, 
         }
     }
 
-    // Caso a lixeira use trigger em vez de colisï¿½o fï¿½sica
+    // Caso a lixeira use trigger em vez de colisão física
     private void OnTriggerEnter2D(Collider2D collision)
     {
         TrashBin bin = collision.GetComponent<TrashBin>();
