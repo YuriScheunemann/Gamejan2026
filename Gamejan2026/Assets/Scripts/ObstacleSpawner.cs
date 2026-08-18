@@ -1,7 +1,6 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SocialPlatforms;
-using UnityEngine.UIElements;
-using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class ObstacleSpawner : MonoBehaviour
 {
@@ -29,7 +28,10 @@ public class ObstacleSpawner : MonoBehaviour
 
             if (obstaclesSpawnIndex != 0)
             {
-                GameObject newObstacleObject = Instantiate(obstacleObjects[obstaclesSpawnIndex], new Vector2(Random.Range(leftRange, rightRange), verticalRange), Quaternion.identity);
+                float zRotationValue = Random.Range(-181, 181);
+                
+                GameObject newObstacleObject = Instantiate(obstacleObjects[obstaclesSpawnIndex], new Vector2(Random.Range(leftRange, rightRange), verticalRange), transform.rotation);
+                newObstacleObject.transform.rotation = Quaternion.EulerRotation(0, 0, zRotationValue);
             }
 
         }
