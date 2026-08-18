@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 6d1bc7cf1e175754a92b88a15c82d406
+guid: 5616828fed8060641b76149c494ac9a0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4625713142263845637
-    second: Incorrect_Trash_Test_0
+      213: 370914204154982558
+    second: LIXEIRA AZUL_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 1000
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Incorrect_Trash_Test_0
+      name: LIXEIRA AZUL_0
       rect:
         serializedVersion: 2
-        x: 11
-        y: 5
+        x: 118
+        y: 57
         width: 235
-        height: 245
+        height: 391
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5031e754895d13040800000000000000
-      internalID: 4625713142263845637
+      spriteID: e90fdc4e080c52500800000000000000
+      internalID: 370914204154982558
       vertices: []
       indices: 
       edges: []
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Incorrect_Trash_Test_0: 4625713142263845637
+      LIXEIRA AZUL_0: 370914204154982558
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
