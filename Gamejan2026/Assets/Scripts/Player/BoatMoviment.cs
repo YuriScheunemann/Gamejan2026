@@ -1,11 +1,11 @@
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class BoatMoviment : MonoBehaviour
 {
     Rigidbody2D rb;    
     private float _speed = 5;
     private float _moviment;
-
+    [SerializeField] private string _sceneName;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -21,7 +21,9 @@ public class BoatMoviment : MonoBehaviour
     }
     public void SlowSpeed(float slowSpeed)
     {
-        _speed -= slowSpeed;        
+        _speed -= slowSpeed;
+        if(_speed <= 1)
+            SceneManager.LoadScene(_sceneName);
     }
 
 }

@@ -81,7 +81,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 2679171
-  m_SortingLayer: 2
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
   m_Color: {r: 0.24528301, g: 0.24528301, b: 0.24528301, a: 1}
@@ -197,5 +197,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef6ae4a37a64a8442b1c2816132a6461, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObstacleCollision
-  sceneName: GameOver
+  _sceneName: BoatGameOver
   obstacleIndex: 0

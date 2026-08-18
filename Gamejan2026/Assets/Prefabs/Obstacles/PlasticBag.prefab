@@ -81,7 +81,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 2679171
-  m_SortingLayer: 2
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 6668414384260245745, guid: 728ea2f50625428499311c0bba51a03e, type: 3}
   m_Color: {r: 0.5568628, g: 0.47058827, b: 0.43921572, a: 1}
@@ -156,7 +156,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.6480495, y: 0.8064292}
+  m_Size: {x: 0.6, y: 0.8}
   m_EdgeRadius: 0
 --- !u!114 &5179784930650460290
 MonoBehaviour:
@@ -170,7 +170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef6ae4a37a64a8442b1c2816132a6461, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObstacleCollision
-  sceneName: 
+  _sceneName: 
   obstacleIndex: 1
 --- !u!50 &51733539421617478
 Rigidbody2D:

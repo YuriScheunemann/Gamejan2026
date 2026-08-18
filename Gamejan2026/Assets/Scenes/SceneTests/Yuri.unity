@@ -410,6 +410,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4959346922515990625, guid: 2f79632739309664086a7b246892abd1, type: 3}
+      propertyPath: _sceneName
+      value: BoatGameOver
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -467,6 +471,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8273839045466846588, guid: a5a3b4b1e40813b4d902d7ee8acd5c83, type: 3}
+      propertyPath: obstacleObjects.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8273839045466846588, guid: a5a3b4b1e40813b4d902d7ee8acd5c83, type: 3}
+      propertyPath: 'obstacleObjects.Array.data[0]'
+      value: 
+      objectReference: {fileID: 837500377220910736, guid: b7fee4cea7841a448a05d15225a97ae2, type: 3}
+    - target: {fileID: 8273839045466846588, guid: a5a3b4b1e40813b4d902d7ee8acd5c83, type: 3}
+      propertyPath: 'obstacleObjects.Array.data[1]'
+      value: 
+      objectReference: {fileID: 837500377220910736, guid: b7fee4cea7841a448a05d15225a97ae2, type: 3}
+    - target: {fileID: 8273839045466846588, guid: a5a3b4b1e40813b4d902d7ee8acd5c83, type: 3}
+      propertyPath: 'obstacleObjects.Array.data[2]'
+      value: 
+      objectReference: {fileID: 837500377220910736, guid: dba03ee867db1274fb1308d420abfb03, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

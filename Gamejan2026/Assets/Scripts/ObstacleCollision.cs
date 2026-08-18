@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class ObstacleCollision : MonoBehaviour
 {
-    [SerializeField] private string sceneName;
+    [SerializeField] private string _sceneName;
     [SerializeField][Range(0, 2)] private int obstacleIndex;
     bool Iscane = false;
     private Rigidbody2D rigidbody2D;
@@ -38,17 +38,20 @@ public class ObstacleCollision : MonoBehaviour
             gameObject.transform.SetParent(collision.collider.transform);
             rigidbody2D.gravityScale = 0;
             rigidbody2D.linearVelocity = Vector2.zero;
-            rigidbody2D.bodyType = RigidbodyType2D.Kinematic;     
+            rigidbody2D.bodyType = RigidbodyType2D.Kinematic;
             surfaceEffector2D.forceScale = 0;
             surfaceEffector2D.speed = 0;
-            boxCollider2D.size = new Vector2(0.8f,1.8f);
+            if (obstacleIndex == 1)
+                boxCollider2D.size = new Vector2(0.5f, 0.7f);
+            else if (obstacleIndex == 2)
+                boxCollider2D.size = new Vector2(0.8f, 1.8f);
             boatMoviment = GetComponentInParent<BoatMoviment>();
             boatMoviment.SlowSpeed(slowSpeed);
-            StartCoroutine(ObstacleDestroy());          
+            StartCoroutine(ObstacleDestroy());
         }
-        
+
         if (collision.collider.CompareTag("Player") && Iscane)
-            SceneManager.LoadScene(sceneName);
+            SceneManager.LoadScene(_sceneName);
     }
     public void SetState(IndexSpawn newindex)
     {
@@ -73,10 +76,10 @@ public class ObstacleCollision : MonoBehaviour
                 Iscane = true;
                 break;
             case (int)IndexSpawn.PlasticBag:
-                slowSpeed = 0.2f;
+                slowSpeed = 0.5f;
                 break;
             case (int)IndexSpawn.Web:
-                slowSpeed = 0.4f;
+                slowSpeed = 1;
                 break;
         }
     }
@@ -85,9 +88,9 @@ public class ObstacleCollision : MonoBehaviour
     {
         yield return new WaitForSeconds(30);
         if (obstacleIndex == 1)
-            slowSpeed = -0.2f;
+            slowSpeed = -0.5f;
         else if (obstacleIndex == 2)
-            slowSpeed = -0.4f;
+            slowSpeed = -1f;
         boatMoviment.SlowSpeed(slowSpeed);
         Destroy(gameObject);
     }
