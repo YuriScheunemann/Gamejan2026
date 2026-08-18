@@ -7,18 +7,18 @@ using UnityEngine.UI;
 public class Menu : MonoBehaviour
 {
     [Header("Botoes")]
-    public Button playButton;
-    public Button quitButton;
-    public Button closeButton;
-    public Button controlsButton;
+    [SerializeField] private Button playButton;
+    [SerializeField] private Button quitButton;
+    [SerializeField] private Button closeButton;
+    [SerializeField] private Button controlsButton;
 
-    public GameObject creditosPanel;
-    public GameObject controlsPanel;
+    [SerializeField] private GameObject creditosPanel;
+    [SerializeField] private GameObject controlsPanel;
     public UnityEvent Credits;
     public UnityEvent Controls;
     public UnityEvent close;
     [Header("Configuracoes")]
-    public string sceneToLoad = "GameScene";
+    [SerializeField] private string sceneToLoad = "GameScene";
 
     void Start()
     {
