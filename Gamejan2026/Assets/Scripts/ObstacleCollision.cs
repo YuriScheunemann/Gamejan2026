@@ -1,16 +1,16 @@
-using Unity.VisualScripting;
-using UnityEditor.Animations;
-using UnityEditor.SearchService;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class ObstacleCollision : MonoBehaviour
 {
     [SerializeField] private string sceneName;
-    [SerializeField] [Range(0, 2)] private int obstacleIndex;
+    [SerializeField][Range(0, 2)] private int obstacleIndex;
     bool Iscane = false;
     private Rigidbody2D rigidbody2D;
     private SurfaceEffector2D surfaceEffector2D;
+    BoatMoviment boatMoviment;
+    float slowSpeed = 0;
     public enum IndexSpawn
     {
         Cane,
@@ -27,22 +27,25 @@ public class ObstacleCollision : MonoBehaviour
     {
         //BackgroundVelocity - velocityy
         //boatVelocity - velocityy       
-        if(collision.collider.CompareTag("Destroyer"))
+        if (collision.collider.CompareTag("Destroyer"))
             Destroy(gameObject);
 
         if (collision.collider.CompareTag("Player") && !Iscane)
         {
             gameObject.transform.SetParent(collision.collider.transform);
+            rigidbody2D.gravityScale = 0;
             rigidbody2D.bodyType = RigidbodyType2D.Kinematic;
             rigidbody2D.gravityScale = 0;
             surfaceEffector2D.forceScale = 0;
-            surfaceEffector2D.speed = 0;            
+            surfaceEffector2D.speed = 0;
+            boatMoviment = GetComponentInParent<BoatMoviment>();
+            boatMoviment.SlowSpeed(slowSpeed);
+            StartCoroutine(ObstacleDestroy());
         }
-           
-            //backgroundVelocity - velocityy
-            //SceneManager.LoadScene(sceneName);
+        //backgroundVelocity - velocityy
 
-        if(collision.collider.CompareTag("Player") && Iscane)
+
+        if (collision.collider.CompareTag("Player") && Iscane)
             SceneManager.LoadScene(sceneName);
     }
     public void SetState(IndexSpawn newindex)
@@ -50,29 +53,40 @@ public class ObstacleCollision : MonoBehaviour
         //O primeiro swwitch é para simular um OnTriggerExit, onde o inimigo para de fazer algo relacionado ao estado anterior, e o segundo switch é para simular um OnTriggerEnter, onde o inimigo começa a fazer algo relacionado ao novo estado.
         switch (obstacleIndex)
         {
-            case (int)IndexSpawn.Cane:              
+            case (int)IndexSpawn.Cane:
                 Iscane = false;
                 break;
             case (int)IndexSpawn.PlasticBag:
-                // velocityy = -1
+                slowSpeed = 0;
                 break;
             case (int)IndexSpawn.Web:
-                // velocityy = -2
+                slowSpeed = 0;
                 break;
         }
 
         // O segundo switch é para simular um OnTriggerEnter, onde o inimigo começa a fazer algo relacionado ao novo estado.
         switch (obstacleIndex)
-        {           
+        {
             case (int)IndexSpawn.Cane:
-                Iscane = true;              
+                Iscane = true;
                 break;
             case (int)IndexSpawn.PlasticBag:
-                // velocityy = -1
+                slowSpeed = 0.2f;
                 break;
             case (int)IndexSpawn.Web:
-                // velocityy = -2
+                slowSpeed = 0.4f;
                 break;
         }
+    }
+
+    IEnumerator ObstacleDestroy()
+    {
+        yield return new WaitForSeconds(30);
+        if (obstacleIndex == 1)
+            slowSpeed = -0.2f;
+        else if (obstacleIndex == 2)
+            slowSpeed = -0.4f;
+        boatMoviment.SlowSpeed(slowSpeed);
+        Destroy(gameObject);
     }
 }

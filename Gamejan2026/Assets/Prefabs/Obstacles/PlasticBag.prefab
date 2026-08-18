@@ -198,4 +198,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObstacleCollision
   sceneName: 
-  obstacleIndex: 2
+  obstacleIndex: 1

@@ -1,10 +1,9 @@
 using UnityEngine;
-using static UnityEditor.Searcher.SearcherWindow.Alignment;
 
 public class BoatMoviment : MonoBehaviour
 {
     Rigidbody2D rb;    
-    [SerializeField] private float _speed = 2;
+    private float _speed = 5;
     private float _moviment;
 
     void Start()
@@ -20,4 +19,11 @@ public class BoatMoviment : MonoBehaviour
     {
         _moviment = Input.GetAxis("Horizontal");       
     }
+    public void SlowSpeed(float slowSpeed)
+    {
+        _speed -= slowSpeed;
+        print("slow" +  slowSpeed);
+        print(_speed);
+    }
+
 }
