@@ -151,7 +151,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5833d36be0e2c8c42b9a65aace6034ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoatMoviment
-  _speed: 5
 --- !u!50 &7479677617838808543
 Rigidbody2D:
   serializedVersion: 5
@@ -178,4 +177,4 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 6
