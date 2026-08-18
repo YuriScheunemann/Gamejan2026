@@ -10,6 +10,7 @@ public class SuitsManager : MonoBehaviour
         if (inputsIndex == 4) 
         {
             AllSuitsOn.Invoke();
+            print("All suits pressed");
         }
     }
 }

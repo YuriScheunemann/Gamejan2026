@@ -3,19 +3,25 @@ using UnityEngine;
 public class SuitCollision : MonoBehaviour
 {
     SuitsManager suitsManager;
-   
     private void Start()
     {
-        suitsManager = GetComponent<SuitsManager>();
+        suitsManager = GetComponent<SuitsManager>();        ;
     }
-    void OnTriggerStay(Collider other)
+    void OnTriggerEnter(Collider other)
     {
-        //if(other.GetComponent<CScriptName>()) {
-        suitsManager.AllSuitsOnReach(1);
+        print("Trigger entered");
+        if (other.GetComponent<MouseGrab>())
+        {
+            suitsManager.AllSuitsOnReach(1);
+            print("less one");
+        }
     }
     void OnTriggerExit(Collider other)
     {
-        //if(other.GetComponent<CScriptName>()) {
-        suitsManager.AllSuitsOnReach(-1);
+        if (other.GetComponent<MouseGrab>())
+        {
+            suitsManager.AllSuitsOnReach(-1);
+            print("More one");
+        }
     }
 }
