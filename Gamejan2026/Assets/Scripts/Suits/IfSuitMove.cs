@@ -35,23 +35,23 @@ public class IfSuitMove : MonoBehaviour
             switch (suitsEnum)
             {
                 case SuitsEnum.Red:
-                    StartCoroutine(MoveDown(0.01f));
                     _indexSuit = 1;
+                    StartCoroutine(MoveDown(0.08f));                  
                     break;
 
                 case SuitsEnum.Blue:
-                    StartCoroutine(MoveDown(0.01f));
                     _indexSuit = 3;
+                    StartCoroutine(MoveDown(0.08f));                   
                     break;
 
                 case SuitsEnum.Yellow:
-                    StartCoroutine(MoveDown(0.01f));
                     _indexSuit = 2;
+                    StartCoroutine(MoveDown(0.08f));                    
                     break;
 
                 case SuitsEnum.Green:
-                    StartCoroutine(MoveDown(0.01f));
                     _indexSuit = 0;
+                    StartCoroutine(MoveDown(0.08f));                    
                     break;
             }
         }
@@ -60,23 +60,23 @@ public class IfSuitMove : MonoBehaviour
             switch (suitsEnum)
             {
                 case SuitsEnum.Red:
-                    StartCoroutine(MoveUp(-0.01f));
                     _indexSuit = 1;
+                    StartCoroutine(MoveUp(-0.08f));                   
                     break;
 
                 case SuitsEnum.Blue:
-                    StartCoroutine(MoveUp(-0.01f));
                     _indexSuit = 3;
+                    StartCoroutine(MoveUp(-0.08f));                   
                     break;
 
                 case SuitsEnum.Yellow:
-                    StartCoroutine(MoveUp(-0.01f));
                     _indexSuit = 2;
+                    StartCoroutine(MoveUp(-0.08f));                   
                     break;
 
                 case SuitsEnum.Green:
-                    StartCoroutine(MoveUp(-0.01f));
                     _indexSuit = 0;
+                    StartCoroutine(MoveUp(-0.08f));                    
                     break;
             }
         }
@@ -84,7 +84,7 @@ public class IfSuitMove : MonoBehaviour
 
     private IEnumerator MoveDown(float newPosY)
     {
-        yield return new WaitForSeconds(0.25f);
+      
         if (Suits[_indexSuit].transform.position.y >= 3)
         {
             Suits[_indexSuit].transform.position = new Vector3(Suits[_indexSuit].transform.position.x, 3, Suits[_indexSuit].transform.position.z);
@@ -96,13 +96,12 @@ public class IfSuitMove : MonoBehaviour
             yield return null;
         }
         Vector3 suitPosition = Suits[_indexSuit].transform.position;
-        suitPosition.y -= newPosY - 0.1f;
+        suitPosition.y -= newPosY;
         Suits[_indexSuit].transform.position = suitPosition;
     }
     private IEnumerator MoveUp(float newPosY)
     {
-
-        yield return new WaitForSeconds(0.25f);
+        
         if (Suits[_indexSuit].transform.position.y >= 3)
         {
             Suits[_indexSuit].transform.position = new Vector3(Suits[_indexSuit].transform.position.x, 3, Suits[_indexSuit].transform.position.z);
@@ -114,7 +113,7 @@ public class IfSuitMove : MonoBehaviour
             yield return null;
         }
         Vector3 suitPosition = Suits[_indexSuit].transform.position;
-        suitPosition.y -= newPosY + 0.1f;
+        suitPosition.y -= newPosY;
         Suits[_indexSuit].transform.position = suitPosition;
     }
     private IEnumerator lastPosition()
