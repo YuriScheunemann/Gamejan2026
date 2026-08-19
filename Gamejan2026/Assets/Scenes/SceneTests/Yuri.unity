@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 311183355}
   - component: {fileID: 311183358}
   - component: {fileID: 311183359}
+  - component: {fileID: 311183360}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -273,6 +274,103 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_MaxRayIntersections: 0
+--- !u!82 &311183360
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 311183354}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &588061340 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2925257613890166641, guid: 2f79632739309664086a7b246892abd1, type: 3}
@@ -455,6 +553,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 792255585899544201, guid: b54c87aabe2ca99409cb674b9d0df610, type: 3}
+      propertyPath: onClip
+      value: 
+      objectReference: {fileID: 8300000, guid: c4927eb2b2e936f4fb0cb5623ed418c8, type: 3}
+    - target: {fileID: 792255585899544201, guid: b54c87aabe2ca99409cb674b9d0df610, type: 3}
+      propertyPath: offClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 92b2098687c881249b95f90b706092ba, type: 3}
+    - target: {fileID: 792255585899544201, guid: b54c87aabe2ca99409cb674b9d0df610, type: 3}
+      propertyPath: cameraAudioSource
+      value: 
+      objectReference: {fileID: 311183360}
     - target: {fileID: 1393502513596036023, guid: b54c87aabe2ca99409cb674b9d0df610, type: 3}
       propertyPath: AllSuitsOn.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -463,6 +573,18 @@ PrefabInstance:
       propertyPath: AllSuitsIsntOn.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 588061340}
+    - target: {fileID: 1690889131765734588, guid: b54c87aabe2ca99409cb674b9d0df610, type: 3}
+      propertyPath: onClip
+      value: 
+      objectReference: {fileID: 8300000, guid: c4927eb2b2e936f4fb0cb5623ed418c8, type: 3}
+    - target: {fileID: 1690889131765734588, guid: b54c87aabe2ca99409cb674b9d0df610, type: 3}
+      propertyPath: offClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 92b2098687c881249b95f90b706092ba, type: 3}
+    - target: {fileID: 1690889131765734588, guid: b54c87aabe2ca99409cb674b9d0df610, type: 3}
+      propertyPath: cameraAudioSource
+      value: 
+      objectReference: {fileID: 311183360}
     - target: {fileID: 4357113507604040716, guid: b54c87aabe2ca99409cb674b9d0df610, type: 3}
       propertyPath: m_Name
       value: ScreenSuits
@@ -471,6 +593,30 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5025516650878564232, guid: b54c87aabe2ca99409cb674b9d0df610, type: 3}
+      propertyPath: onClip
+      value: 
+      objectReference: {fileID: 8300000, guid: c4927eb2b2e936f4fb0cb5623ed418c8, type: 3}
+    - target: {fileID: 5025516650878564232, guid: b54c87aabe2ca99409cb674b9d0df610, type: 3}
+      propertyPath: offClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 92b2098687c881249b95f90b706092ba, type: 3}
+    - target: {fileID: 5025516650878564232, guid: b54c87aabe2ca99409cb674b9d0df610, type: 3}
+      propertyPath: cameraAudioSource
+      value: 
+      objectReference: {fileID: 311183360}
+    - target: {fileID: 6524733614515270130, guid: b54c87aabe2ca99409cb674b9d0df610, type: 3}
+      propertyPath: onClip
+      value: 
+      objectReference: {fileID: 8300000, guid: c4927eb2b2e936f4fb0cb5623ed418c8, type: 3}
+    - target: {fileID: 6524733614515270130, guid: b54c87aabe2ca99409cb674b9d0df610, type: 3}
+      propertyPath: offClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 92b2098687c881249b95f90b706092ba, type: 3}
+    - target: {fileID: 6524733614515270130, guid: b54c87aabe2ca99409cb674b9d0df610, type: 3}
+      propertyPath: cameraAudioSource
+      value: 
+      objectReference: {fileID: 311183360}
     - target: {fileID: 6959257732926812663, guid: b54c87aabe2ca99409cb674b9d0df610, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.67875
