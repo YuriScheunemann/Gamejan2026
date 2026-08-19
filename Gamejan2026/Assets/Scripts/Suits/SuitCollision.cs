@@ -9,7 +9,8 @@ public class SuitCollision : MonoBehaviour
         if (other.GetComponent<MouseGrab>() && !alreadyStay)
         {
             suitsManager.AllSuitsOnReach(1); 
-            alreadyStay = true;            
+            alreadyStay = true;
+            print("more 1");
         }
     }
     void OnTriggerExit2D(Collider2D other)
@@ -17,7 +18,8 @@ public class SuitCollision : MonoBehaviour
         if (other.GetComponent<MouseGrab>())
         {
             suitsManager.AllSuitsOnReach(-1);
-            alreadyStay = false;           
+            alreadyStay = false;
+            print("less 1");
         }
     }
 }

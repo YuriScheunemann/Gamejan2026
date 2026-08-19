@@ -84,35 +84,30 @@ public class IfSuitMove : MonoBehaviour
 
     private IEnumerator MoveDown(float newPosY)
     {
+        Vector3 suitPosition = Suits[_indexSuit].transform.position;
       
-        if (Suits[_indexSuit].transform.position.y >= 3)
-        {
-            Suits[_indexSuit].transform.position = new Vector3(Suits[_indexSuit].transform.position.x, 3, Suits[_indexSuit].transform.position.z);
-            yield return null;
-        }
         if (Suits[_indexSuit].transform.position.y <= -4)
         {
-            Suits[_indexSuit].transform.position = new Vector3(Suits[_indexSuit].transform.position.x, -4, Suits[_indexSuit].transform.position.z);
+            suitPosition.y += newPosY;
+            Suits[_indexSuit].transform.position = suitPosition;
+            //Suits[_indexSuit].transform.position = new Vector3(Suits[_indexSuit].transform.position.x, -4, Suits[_indexSuit].transform.position.z);
             yield return null;
         }
-        Vector3 suitPosition = Suits[_indexSuit].transform.position;
+        
         suitPosition.y -= newPosY;
         Suits[_indexSuit].transform.position = suitPosition;
     }
     private IEnumerator MoveUp(float newPosY)
     {
-        
+        Vector3 suitPosition = Suits[_indexSuit].transform.position;
         if (Suits[_indexSuit].transform.position.y >= 3)
         {
-            Suits[_indexSuit].transform.position = new Vector3(Suits[_indexSuit].transform.position.x, 3, Suits[_indexSuit].transform.position.z);
+            suitPosition.y += newPosY;
+            Suits[_indexSuit].transform.position = suitPosition;
+            // Suits[_indexSuit].transform.position = new Vector3(Suits[_indexSuit].transform.position.x, 3, Suits[_indexSuit].transform.position.z);
             yield return null;
-        }
-        if (Suits[_indexSuit].transform.position.y <= -4)
-        {
-            Suits[_indexSuit].transform.position = new Vector3(Suits[_indexSuit].transform.position.x, -4, Suits[_indexSuit].transform.position.z);
-            yield return null;
-        }
-        Vector3 suitPosition = Suits[_indexSuit].transform.position;
+        }    
+     
         suitPosition.y -= newPosY;
         Suits[_indexSuit].transform.position = suitPosition;
     }
