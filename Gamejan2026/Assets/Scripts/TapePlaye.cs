@@ -11,14 +11,6 @@ public class TapePlaye : MonoBehaviour
         tapeClip = GetComponent<AudioClip>();
         cameraAudioSource = GetComponent<AudioSource>();
     }
-
-   
-    void Update()
-    {
-       
-           
-        
-    }
     private void OnMouseDown()
     {
         cameraAudioSource.PlayOneShot(tapeClip);
