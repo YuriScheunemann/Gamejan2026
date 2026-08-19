@@ -3,6 +3,10 @@ using UnityEngine;
 
 public class SlowdownOnCollision : MonoBehaviour
 {
+
+    [Header("HUD")]
+    [SerializeField] private ReactionHUD reactionHUD;
+
     [Header("Desaceleração")]
     [SerializeField] private float slowMultiplier = 0.5f;
     [SerializeField] private float duration = 2f;
@@ -28,6 +32,8 @@ public class SlowdownOnCollision : MonoBehaviour
     {
         if (riverScroller == null)
             return;
+
+        reactionHUD?.ShowBad();
 
         riverScroller.SlowDown(
             slowMultiplier,

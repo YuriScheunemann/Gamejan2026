@@ -4,6 +4,9 @@ using UnityEngine.SceneManagement;
 
 public class TurtleCollector : MonoBehaviour
 {
+    [Header("HUD")]
+    [SerializeField] private ReactionHUD reactionHUD;
+
     [Header("Sapos")]
     [SerializeField] private string collectibleTag = "sapo";
     [SerializeField] private int requiredCount = 5;
@@ -29,6 +32,7 @@ public class TurtleCollector : MonoBehaviour
 
     private void CollectFrog(GameObject frog)
     {
+        reactionHUD?.ShowGood();
         collectedCount++;
 
         Destroy(frog);
