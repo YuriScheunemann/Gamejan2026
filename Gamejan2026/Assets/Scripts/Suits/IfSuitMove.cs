@@ -6,7 +6,13 @@ public class IfSuitMove : MonoBehaviour
     [SerializeField] private GameObject[] Suits;
     [SerializeField] private SuitsEnum suitsEnum;
     [SerializeField] private int _indexSuit;
+    public Vector3 _inicialSuitPosition;
     private float _lastSuitPosition;
+
+    private void Start()
+    {
+        _inicialSuitPosition = gameObject.transform.position;
+    }
     void OnMouseDown()
     {
         _lastSuitPosition = gameObject.transform.position.y;

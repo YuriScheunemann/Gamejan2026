@@ -8,6 +8,9 @@ public class SuitsManager : MonoBehaviour
     public void AllSuitsOnReach(int input)
     {
         inputsIndex += input;
+        if (inputsIndex < 0)
+            inputsIndex = 0;
+
         if (inputsIndex != 4)
         {
             AllSuitsIsntOn.Invoke();
@@ -17,8 +20,7 @@ public class SuitsManager : MonoBehaviour
 
         if (inputsIndex == 4)
         {
-            AllSuitsOn.Invoke();
-            print("All suits pressed");
+            AllSuitsOn.Invoke();           
         }
     }
 }
