@@ -545,6 +545,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1393502513596036023}
     - target: {fileID: 2648508834430052770, guid: ae1b282902262fb4aad686233399b8a9, type: 3}
+      propertyPath: onClip
+      value: 
+      objectReference: {fileID: 8300000, guid: c4927eb2b2e936f4fb0cb5623ed418c8, type: 3}
+    - target: {fileID: 2648508834430052770, guid: ae1b282902262fb4aad686233399b8a9, type: 3}
+      propertyPath: offClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 92b2098687c881249b95f90b706092ba, type: 3}
+    - target: {fileID: 2648508834430052770, guid: ae1b282902262fb4aad686233399b8a9, type: 3}
       propertyPath: suitsManager
       value: 
       objectReference: {fileID: 1393502513596036023}
@@ -552,6 +560,14 @@ PrefabInstance:
       propertyPath: suitsManager
       value: 
       objectReference: {fileID: 1393502513596036023}
+    - target: {fileID: 4127815373318032279, guid: ae1b282902262fb4aad686233399b8a9, type: 3}
+      propertyPath: onClip
+      value: 
+      objectReference: {fileID: 8300000, guid: c4927eb2b2e936f4fb0cb5623ed418c8, type: 3}
+    - target: {fileID: 4127815373318032279, guid: ae1b282902262fb4aad686233399b8a9, type: 3}
+      propertyPath: offClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 92b2098687c881249b95f90b706092ba, type: 3}
     - target: {fileID: 4127815373318032279, guid: ae1b282902262fb4aad686233399b8a9, type: 3}
       propertyPath: suitsManager
       value: 
@@ -565,9 +581,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1393502513596036023}
     - target: {fileID: 7746741416077746339, guid: ae1b282902262fb4aad686233399b8a9, type: 3}
+      propertyPath: onClip
+      value: 
+      objectReference: {fileID: 8300000, guid: c4927eb2b2e936f4fb0cb5623ed418c8, type: 3}
+    - target: {fileID: 7746741416077746339, guid: ae1b282902262fb4aad686233399b8a9, type: 3}
+      propertyPath: offClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 92b2098687c881249b95f90b706092ba, type: 3}
+    - target: {fileID: 7746741416077746339, guid: ae1b282902262fb4aad686233399b8a9, type: 3}
       propertyPath: suitsManager
       value: 
       objectReference: {fileID: 1393502513596036023}
+    - target: {fileID: 8409150852321257177, guid: ae1b282902262fb4aad686233399b8a9, type: 3}
+      propertyPath: onClip
+      value: 
+      objectReference: {fileID: 8300000, guid: c4927eb2b2e936f4fb0cb5623ed418c8, type: 3}
+    - target: {fileID: 8409150852321257177, guid: ae1b282902262fb4aad686233399b8a9, type: 3}
+      propertyPath: offClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 92b2098687c881249b95f90b706092ba, type: 3}
     - target: {fileID: 8409150852321257177, guid: ae1b282902262fb4aad686233399b8a9, type: 3}
       propertyPath: suitsManager
       value: 

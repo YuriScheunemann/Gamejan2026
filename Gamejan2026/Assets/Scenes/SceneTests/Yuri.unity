@@ -554,14 +554,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 792255585899544201, guid: b54c87aabe2ca99409cb674b9d0df610, type: 3}
-      propertyPath: onClip
-      value: 
-      objectReference: {fileID: 8300000, guid: c4927eb2b2e936f4fb0cb5623ed418c8, type: 3}
-    - target: {fileID: 792255585899544201, guid: b54c87aabe2ca99409cb674b9d0df610, type: 3}
-      propertyPath: offClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 92b2098687c881249b95f90b706092ba, type: 3}
-    - target: {fileID: 792255585899544201, guid: b54c87aabe2ca99409cb674b9d0df610, type: 3}
       propertyPath: cameraAudioSource
       value: 
       objectReference: {fileID: 311183360}
@@ -574,14 +566,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 588061340}
     - target: {fileID: 1690889131765734588, guid: b54c87aabe2ca99409cb674b9d0df610, type: 3}
-      propertyPath: onClip
-      value: 
-      objectReference: {fileID: 8300000, guid: c4927eb2b2e936f4fb0cb5623ed418c8, type: 3}
-    - target: {fileID: 1690889131765734588, guid: b54c87aabe2ca99409cb674b9d0df610, type: 3}
-      propertyPath: offClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 92b2098687c881249b95f90b706092ba, type: 3}
-    - target: {fileID: 1690889131765734588, guid: b54c87aabe2ca99409cb674b9d0df610, type: 3}
       propertyPath: cameraAudioSource
       value: 
       objectReference: {fileID: 311183360}
@@ -589,30 +573,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ScreenSuits
       objectReference: {fileID: 0}
-    - target: {fileID: 4357113507604040716, guid: b54c87aabe2ca99409cb674b9d0df610, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5025516650878564232, guid: b54c87aabe2ca99409cb674b9d0df610, type: 3}
-      propertyPath: onClip
-      value: 
-      objectReference: {fileID: 8300000, guid: c4927eb2b2e936f4fb0cb5623ed418c8, type: 3}
-    - target: {fileID: 5025516650878564232, guid: b54c87aabe2ca99409cb674b9d0df610, type: 3}
-      propertyPath: offClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 92b2098687c881249b95f90b706092ba, type: 3}
     - target: {fileID: 5025516650878564232, guid: b54c87aabe2ca99409cb674b9d0df610, type: 3}
       propertyPath: cameraAudioSource
       value: 
       objectReference: {fileID: 311183360}
-    - target: {fileID: 6524733614515270130, guid: b54c87aabe2ca99409cb674b9d0df610, type: 3}
-      propertyPath: onClip
-      value: 
-      objectReference: {fileID: 8300000, guid: c4927eb2b2e936f4fb0cb5623ed418c8, type: 3}
-    - target: {fileID: 6524733614515270130, guid: b54c87aabe2ca99409cb674b9d0df610, type: 3}
-      propertyPath: offClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 92b2098687c881249b95f90b706092ba, type: 3}
     - target: {fileID: 6524733614515270130, guid: b54c87aabe2ca99409cb674b9d0df610, type: 3}
       propertyPath: cameraAudioSource
       value: 
