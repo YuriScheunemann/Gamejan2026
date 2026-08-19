@@ -553,6 +553,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 49057874468321073, guid: b54c87aabe2ca99409cb674b9d0df610, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 792255585899544201, guid: b54c87aabe2ca99409cb674b9d0df610, type: 3}
+      propertyPath: onClip
+      value: 
+      objectReference: {fileID: 8300000, guid: a829ffe4418d48e4d87d46852a9fb8b0, type: 3}
+    - target: {fileID: 792255585899544201, guid: b54c87aabe2ca99409cb674b9d0df610, type: 3}
+      propertyPath: offClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 94fc5a84da4a0664991f82d359280282, type: 3}
     - target: {fileID: 792255585899544201, guid: b54c87aabe2ca99409cb674b9d0df610, type: 3}
       propertyPath: cameraAudioSource
       value: 
@@ -566,17 +578,45 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 588061340}
     - target: {fileID: 1690889131765734588, guid: b54c87aabe2ca99409cb674b9d0df610, type: 3}
+      propertyPath: onClip
+      value: 
+      objectReference: {fileID: 8300000, guid: a829ffe4418d48e4d87d46852a9fb8b0, type: 3}
+    - target: {fileID: 1690889131765734588, guid: b54c87aabe2ca99409cb674b9d0df610, type: 3}
+      propertyPath: offClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 94fc5a84da4a0664991f82d359280282, type: 3}
+    - target: {fileID: 1690889131765734588, guid: b54c87aabe2ca99409cb674b9d0df610, type: 3}
       propertyPath: cameraAudioSource
       value: 
       objectReference: {fileID: 311183360}
+    - target: {fileID: 2676528958236810357, guid: b54c87aabe2ca99409cb674b9d0df610, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4357113507604040716, guid: b54c87aabe2ca99409cb674b9d0df610, type: 3}
       propertyPath: m_Name
       value: ScreenSuits
       objectReference: {fileID: 0}
     - target: {fileID: 5025516650878564232, guid: b54c87aabe2ca99409cb674b9d0df610, type: 3}
+      propertyPath: onClip
+      value: 
+      objectReference: {fileID: 8300000, guid: a829ffe4418d48e4d87d46852a9fb8b0, type: 3}
+    - target: {fileID: 5025516650878564232, guid: b54c87aabe2ca99409cb674b9d0df610, type: 3}
+      propertyPath: offClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 94fc5a84da4a0664991f82d359280282, type: 3}
+    - target: {fileID: 5025516650878564232, guid: b54c87aabe2ca99409cb674b9d0df610, type: 3}
       propertyPath: cameraAudioSource
       value: 
       objectReference: {fileID: 311183360}
+    - target: {fileID: 6524733614515270130, guid: b54c87aabe2ca99409cb674b9d0df610, type: 3}
+      propertyPath: onClip
+      value: 
+      objectReference: {fileID: 8300000, guid: a829ffe4418d48e4d87d46852a9fb8b0, type: 3}
+    - target: {fileID: 6524733614515270130, guid: b54c87aabe2ca99409cb674b9d0df610, type: 3}
+      propertyPath: offClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 94fc5a84da4a0664991f82d359280282, type: 3}
     - target: {fileID: 6524733614515270130, guid: b54c87aabe2ca99409cb674b9d0df610, type: 3}
       propertyPath: cameraAudioSource
       value: 
@@ -620,6 +660,14 @@ PrefabInstance:
     - target: {fileID: 6959257732926812663, guid: b54c87aabe2ca99409cb674b9d0df610, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7845785928284260731, guid: b54c87aabe2ca99409cb674b9d0df610, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9216619817101840371, guid: b54c87aabe2ca99409cb674b9d0df610, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -804,7 +852,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8273839045466846588, guid: a5a3b4b1e40813b4d902d7ee8acd5c83, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
