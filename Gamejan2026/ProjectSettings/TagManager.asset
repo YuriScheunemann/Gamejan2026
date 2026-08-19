@@ -9,6 +9,7 @@ TagManager:
   - sacola
   - cano
   - sapo
+  - Load
   layers:
   - Default
   - TransparentFX
