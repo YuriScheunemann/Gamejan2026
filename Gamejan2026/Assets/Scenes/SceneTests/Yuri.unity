@@ -461,8 +461,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3d113a0e71d18940aa4fa8c53ed3867, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::IfSuitMove
-  Suits: []
+  Suits:
+  - {fileID: 1730819927}
+  - {fileID: 1959286598}
+  - {fileID: 158784162}
+  - {fileID: 1457486903}
   suitsEnum: 2
+  _indexSuit: 0
 --- !u!1 &311183354
 GameObject:
   m_ObjectHideFlags: 0
@@ -1113,8 +1118,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3d113a0e71d18940aa4fa8c53ed3867, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::IfSuitMove
-  Suits: []
+  Suits:
+  - {fileID: 1730819927}
+  - {fileID: 1959286598}
+  - {fileID: 158784162}
+  - {fileID: 1457486903}
   suitsEnum: 3
+  _indexSuit: 0
 --- !u!1 &1507283036
 GameObject:
   m_ObjectHideFlags: 0
@@ -1536,8 +1546,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3d113a0e71d18940aa4fa8c53ed3867, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::IfSuitMove
-  Suits: []
+  Suits:
+  - {fileID: 1730819927}
+  - {fileID: 1959286598}
+  - {fileID: 158784162}
+  - {fileID: 1457486903}
   suitsEnum: 0
+  _indexSuit: 0
 --- !u!1 &1794077418
 GameObject:
   m_ObjectHideFlags: 0
@@ -1915,8 +1930,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3d113a0e71d18940aa4fa8c53ed3867, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::IfSuitMove
-  Suits: []
+  Suits:
+  - {fileID: 1730819927}
+  - {fileID: 1959286598}
+  - {fileID: 158784162}
+  - {fileID: 1457486903}
   suitsEnum: 1
+  _indexSuit: 0
 --- !u!1001 &3539769730009292220
 PrefabInstance:
   m_ObjectHideFlags: 0

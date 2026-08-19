@@ -1,58 +1,77 @@
-using Unity.VisualScripting;
+using System.Collections;
 using UnityEngine;
 
 public class IfSuitMove : MonoBehaviour
 {
     [SerializeField] private GameObject[] Suits;
     [SerializeField] private SuitsEnum suitsEnum;
-    float transformBase;
-    float newTransformBase;
-    float diferenceFromTransformBase;
-    float forDiferenceFromTransformBase;
-    
-    private void Start()
-    {
-        transformBase = gameObject.transform.position.y;
-        newTransformBase = gameObject.transform.position.y;
-        suitsEnum = gameObject.GetComponent<SuitsEnum>();        
-    }
+    [SerializeField] private int _indexSuit; 
     private void OnMouseDrag()
     {
-        if (gameObject.transform.position.y == float.PositiveInfinity)
+        if (gameObject.transform.position.y <= 0)
         {
-            newTransformBase -= gameObject.transform.position.y;
-            diferenceFromTransformBase += newTransformBase;
-            for (forDiferenceFromTransformBase = transformBase; forDiferenceFromTransformBase < diferenceFromTransformBase; forDiferenceFromTransformBase++)
+            switch (suitsEnum)
             {
-                if(suitsEnum == SuitsEnum.Red)
-                {
-                   //transform.position.y -= new Vector2(0, 2)
-                }
-                if (suitsEnum == SuitsEnum.Blue)
-                {
+                case SuitsEnum.Red:
+                   StartCoroutine(MoveDown(0.01f));
+                    _indexSuit = 1;
+                    break;
 
-                }
-                if (suitsEnum == SuitsEnum.Yellow)
-                {
+                case SuitsEnum.Blue:
+                    StartCoroutine(MoveDown(0.01f));
+                    _indexSuit = 3;
+                    break;
 
-                }
-                if (suitsEnum == SuitsEnum.Green)
-                {
+                case SuitsEnum.Yellow:
+                    StartCoroutine(MoveDown(0.01f));
+                    _indexSuit = 2;
+                    break;
 
-                }
-                //Suits[0].transform.position.y -= new Vector2(0, 2);
-
+                case SuitsEnum.Green:
+                    StartCoroutine(MoveDown(0.01f));
+                    _indexSuit = 0;
+                    break;
             }
-            for (forDiferenceFromTransformBase = transformBase; forDiferenceFromTransformBase > diferenceFromTransformBase; forDiferenceFromTransformBase++)
+        }
+        if (gameObject.transform.position.y > 0)
+        {
+            switch (suitsEnum)
             {
+                case SuitsEnum.Red:
+                    StartCoroutine(MoveUp(0.01f));
+                    _indexSuit = 1;
+                    break;
 
+                case SuitsEnum.Blue:
+                    StartCoroutine(MoveUp(0.01f));
+                    _indexSuit = 3;
+                    break;
+
+                case SuitsEnum.Yellow:
+                    StartCoroutine(MoveUp(0.01f));
+                    _indexSuit = 2;
+                    break;
+
+                case SuitsEnum.Green:
+                    StartCoroutine(MoveUp(0.01f));
+                    _indexSuit = 0;
+                    break;
             }
         }
     }
 
-    private void OnMouseUp()
+    private IEnumerator MoveDown(float newPosY)
     {
-       
-        
+        yield return new WaitForSeconds(0.25f);
+        Vector3 suitPosition = Suits[_indexSuit].transform.position;
+        suitPosition.y -= newPosY;
+        Suits[_indexSuit].transform.position = suitPosition;       
+    }
+    private IEnumerator MoveUp(float newPosY)
+    {
+        yield return new WaitForSeconds(0.25f);
+        Vector3 suitPosition = Suits[_indexSuit].transform.position;
+        suitPosition.y -= newPosY;
+        Suits[_indexSuit].transform.position = suitPosition;        
     }
 }
