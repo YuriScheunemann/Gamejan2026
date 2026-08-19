@@ -1,6 +1,4 @@
 using System.Collections;
-using System.Drawing;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
