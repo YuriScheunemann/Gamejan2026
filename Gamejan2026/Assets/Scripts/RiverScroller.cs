@@ -10,7 +10,7 @@ public class RiverScroller : MonoBehaviour
     }
     private void MovimentarCenario()
     {
-        Vector2 deslocamento = new Vector2(0, Time.time * velocidadeDoCenario);
+        Vector2 deslocamento = new Vector2(Time.time * velocidadeDoCenario, 0);
         GetComponent<Renderer>().material.mainTextureOffset = deslocamento;
     }
 }
