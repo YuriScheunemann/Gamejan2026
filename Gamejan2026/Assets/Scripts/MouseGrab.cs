@@ -31,10 +31,9 @@ public class MouseGrab : MonoBehaviour
     private void OnMouseDrag()
     {
         if (!isDragging)
-            return;
+            return;        
 
         Vector3 mousePosition = GetMouseWorldPosition();
-
         transform.position = mousePosition + offset;
     }
 
@@ -45,6 +44,7 @@ public class MouseGrab : MonoBehaviour
 
     private Vector3 GetMouseWorldPosition()
     {
+
         Vector3 mousePosition = Input.mousePosition;
         // Mantém o objeto na mesma profundidade da câmera
         mousePosition.z = Mathf.Abs(mainCamera.transform.position.z - transform.position.z);

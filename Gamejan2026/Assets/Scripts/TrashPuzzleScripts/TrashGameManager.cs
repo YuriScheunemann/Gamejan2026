@@ -1,26 +1,26 @@
 using UnityEngine;
-using UnityEngine.Events;
 
 public class TrashGameManager : MonoBehaviour
 {
     public static TrashGameManager Instance { get; private set; }
 
     [Header("Objetivo e limites")]
-    [Tooltip("Quantidade correta de itens para desbloquear")]
-    [SerializeField] private int requiredCorrectToUnlock = 10;
-
-    [Tooltip("Máximo de erros permitidos antes do game over")]
+    [SerializeField] private int requiredCorrectToUnlock = 15;
     [SerializeField] private int maxAllowedErrors = 3;
-
-    [Header("Eventos")]
-    public UnityEvent OnUnlocked;
-    public UnityEvent OnGameOver;
-    public UnityEvent OnScoreChanged;
 
     private int correctCount;
     private int errorCount;
     private bool unlocked;
     private bool gameOver;
+
+    private TrashSpawner trashSpawner;
+
+    public int CorrectCount => correctCount;
+    public int ErrorCount => errorCount;
+    public int RequiredCorrect => requiredCorrectToUnlock;
+    public int MaxAllowedErrors => maxAllowedErrors;
+    public bool IsUnlocked => unlocked;
+    public bool IsGameOver => gameOver;
 
     private void Awake()
     {
@@ -31,16 +31,24 @@ public class TrashGameManager : MonoBehaviour
         }
 
         Instance = this;
+
         unlocked = false;
         gameOver = false;
+        correctCount = 0;
+        errorCount = 0;
     }
 
-    public int CorrectCount => correctCount;
-    public int ErrorCount => errorCount;
-    public int RequiredCorrect => requiredCorrectToUnlock;
-    public int MaxAllowedErrors => maxAllowedErrors;
-    public bool IsUnlocked => unlocked;
-    public bool IsGameOver => gameOver;
+    private void Start()
+    {
+        trashSpawner = FindFirstObjectByType<TrashSpawner>();
+
+        if (trashSpawner == null)
+        {
+            Debug.LogWarning(
+                "TrashGameManager: TrashSpawner não encontrado."
+            );
+        }
+    }
 
     public void RegisterResult(bool correct)
     {
@@ -49,10 +57,8 @@ public class TrashGameManager : MonoBehaviour
 
         if (correct)
         {
-            // Ganha ponto
             correctCount++;
 
-            // Remove 1 erro, mas nunca deixa ficar abaixo de 0
             if (errorCount > 0)
             {
                 errorCount--;
@@ -68,10 +74,13 @@ public class TrashGameManager : MonoBehaviour
                 unlocked = true;
 
                 Debug.Log(
-                    "TrashGameManager: Objetivo atingido — desbloqueado!"
+                    "TrashGameManager: 15 lixos reciclados!"
                 );
 
-                OnUnlocked?.Invoke();
+                if (trashSpawner != null)
+                {
+                    trashSpawner.TrashGoalReached();
+                }
             }
         }
         else
@@ -88,15 +97,10 @@ public class TrashGameManager : MonoBehaviour
                 gameOver = true;
 
                 Debug.Log(
-                    "TrashGameManager: Limite de erros atingido — game over."
+                    "TrashGameManager: Limite de erros atingido."
                 );
-
-                OnGameOver?.Invoke();
             }
         }
-
-        // Atualiza o HUD
-        OnScoreChanged?.Invoke();
     }
 
     public void ResetProgress()
@@ -105,7 +109,5 @@ public class TrashGameManager : MonoBehaviour
         errorCount = 0;
         unlocked = false;
         gameOver = false;
-
-        OnScoreChanged?.Invoke();
     }
 }

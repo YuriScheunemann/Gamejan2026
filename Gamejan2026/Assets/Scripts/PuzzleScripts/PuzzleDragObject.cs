@@ -2,12 +2,19 @@ using UnityEngine;
 
 public class PuzzleDragObject : MonoBehaviour
 {
-    [Header("Destino")]
+    [Header("Posição Correta Primária")]
     [SerializeField] private Transform target;
+
+    [Header("Posição Final")]
+    [SerializeField] private Transform finalPosition;
 
     [Header("Configurações")]
     [SerializeField] private float targetRadius = 1f;
     [SerializeField] private float returnSpeed = 10f;
+    [SerializeField] private float finalMoveSpeed = 8f;
+
+    [Header("Área de Detecção")]
+    [SerializeField] private float spawnDetectionRadius = 1f;
 
     private Camera mainCamera;
 
@@ -17,6 +24,10 @@ public class PuzzleDragObject : MonoBehaviour
     private bool dragging;
     private bool completed;
     private bool returning;
+    private bool movingToFinal;
+
+    public float SpawnDetectionRadius => spawnDetectionRadius;
+    public bool IsCompleted => completed;
 
     private void Start()
     {
@@ -42,11 +53,34 @@ public class PuzzleDragObject : MonoBehaviour
                 returning = false;
             }
         }
+
+        if (movingToFinal && finalPosition != null)
+        {
+            transform.position = Vector3.Lerp(
+                transform.position,
+                finalPosition.position,
+                finalMoveSpeed * Time.deltaTime
+            );
+
+            if (Vector3.Distance(
+                transform.position,
+                finalPosition.position
+            ) < 0.01f)
+            {
+                transform.position = finalPosition.position;
+                movingToFinal = false;
+
+                if (PuzzleOrderManager.Instance != null)
+                {
+                    PuzzleOrderManager.Instance.FinalPieceArrived();
+                }
+            }
+        }
     }
 
     private void OnMouseDown()
     {
-        if (completed || returning)
+        if (completed || returning || movingToFinal)
             return;
 
         Vector3 mousePosition = GetMouseWorldPosition();
@@ -58,7 +92,7 @@ public class PuzzleDragObject : MonoBehaviour
 
     private void OnMouseDrag()
     {
-        if (!dragging || completed)
+        if (!dragging || completed || movingToFinal)
             return;
 
         Vector3 mousePosition = GetMouseWorldPosition();
@@ -68,7 +102,7 @@ public class PuzzleDragObject : MonoBehaviour
 
     private void OnMouseUp()
     {
-        if (!dragging || completed)
+        if (!dragging || completed || movingToFinal)
             return;
 
         dragging = false;
@@ -91,18 +125,19 @@ public class PuzzleDragObject : MonoBehaviour
 
         if (distance <= targetRadius)
         {
-            CompletePuzzlePiece();
+            completed = true;
+
+            transform.position = target.position;
+
+            if (PuzzleOrderManager.Instance != null)
+            {
+                PuzzleOrderManager.Instance.PieceCompleted();
+            }
         }
         else
         {
             StartReturn();
         }
-    }
-
-    private void CompletePuzzlePiece()
-    {
-        completed = true;
-        transform.position = target.position;
     }
 
     private void StartReturn()
@@ -115,6 +150,16 @@ public class PuzzleDragObject : MonoBehaviour
         }
     }
 
+    public void MoveToFinalPosition()
+    {
+        if (finalPosition == null)
+            return;
+
+        movingToFinal = true;
+        dragging = false;
+        returning = false;
+    }
+
     public void SetStartPosition(Vector3 position)
     {
         startPosition = position;
@@ -124,6 +169,7 @@ public class PuzzleDragObject : MonoBehaviour
         completed = false;
         dragging = false;
         returning = false;
+        movingToFinal = false;
     }
 
     public void ResetPosition()
@@ -133,6 +179,7 @@ public class PuzzleDragObject : MonoBehaviour
         completed = false;
         dragging = false;
         returning = false;
+        movingToFinal = false;
     }
 
     private Vector3 GetMouseWorldPosition()
@@ -146,6 +193,16 @@ public class PuzzleDragObject : MonoBehaviour
 
         return mainCamera.ScreenToWorldPoint(
             mousePosition
+        );
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.yellow;
+
+        Gizmos.DrawWireSphere(
+            transform.position,
+            spawnDetectionRadius
         );
     }
 }
