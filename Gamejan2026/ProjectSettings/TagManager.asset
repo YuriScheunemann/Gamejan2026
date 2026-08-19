@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Obstacle
   - Destroyer
+  - sacola
+  - cano
+  - sapo
+  - Load
   layers:
   - Default
   - TransparentFX
@@ -13,9 +17,9 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
+  - agua
+  - grama
+  - groundlayer
   - 
   - 
   - 

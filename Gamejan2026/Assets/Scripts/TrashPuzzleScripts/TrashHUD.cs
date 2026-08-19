@@ -2,8 +2,6 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-
-
 public class TrashHUD : MonoBehaviour
 {
     [Header("Referências UI")]
@@ -13,46 +11,43 @@ public class TrashHUD : MonoBehaviour
     [Header("Sprites de Erro")]
     [SerializeField] private Sprite[] errorSprites;
 
+    private TrashGameManager manager;
+
     private void Start()
     {
-        TrashGameManager mgr = TrashGameManager.Instance;
+        manager = TrashGameManager.Instance;
 
-        if (mgr == null)
+        if (manager == null)
         {
-            Debug.LogError("TrashGameManager não encontrado na cena.");
+            Debug.LogError(
+                "TrashHUD: TrashGameManager não encontrado na cena."
+            );
+
             return;
         }
-
-        mgr.OnScoreChanged.AddListener(UpdateHUD);
-        mgr.OnGameOver.AddListener(OnGameOver);
 
         UpdateHUD();
     }
 
-    private void OnDestroy()
+    private void Update()
     {
-        TrashGameManager mgr = TrashGameManager.Instance;
-
-        if (mgr == null)
+        if (manager == null)
             return;
 
-        mgr.OnScoreChanged.RemoveListener(UpdateHUD);
-        mgr.OnGameOver.RemoveListener(OnGameOver);
+        UpdateHUD();
     }
 
     private void UpdateHUD()
     {
-        TrashGameManager mgr = TrashGameManager.Instance;
-
-        if (mgr == null)
+        if (manager == null)
             return;
 
         if (scoreText != null)
         {
-            scoreText.text = mgr.CorrectCount.ToString();
+            scoreText.text = manager.CorrectCount.ToString();
         }
 
-        UpdateErrorImage(mgr.ErrorCount);
+        UpdateErrorImage(manager.ErrorCount);
     }
 
     private void UpdateErrorImage(int errors)
@@ -60,7 +55,8 @@ public class TrashHUD : MonoBehaviour
         if (errorImage == null)
             return;
 
-        if (errorSprites == null || errorSprites.Length == 0)
+        if (errorSprites == null ||
+            errorSprites.Length == 0)
             return;
 
         int index = Mathf.Clamp(
@@ -70,10 +66,5 @@ public class TrashHUD : MonoBehaviour
         );
 
         errorImage.sprite = errorSprites[index];
-    }
-
-    private void OnGameOver()
-    {
-        Debug.Log("TrashHUD: GameOver acionado.");
     }
 }
