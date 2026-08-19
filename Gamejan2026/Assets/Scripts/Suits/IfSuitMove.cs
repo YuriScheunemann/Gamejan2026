@@ -14,13 +14,11 @@ public class IfSuitMove : MonoBehaviour
     private void OnMouseDrag()
     {
         if (gameObject.transform.position.y >= 3)
-        {
             gameObject.transform.position = new Vector3(gameObject.transform.position.x, 3, gameObject.transform.position.z);
-        }
+        
         if (gameObject.transform.position.y <= -4)
-        {
             gameObject.transform.position = new Vector3(gameObject.transform.position.x, -4, gameObject.transform.position.z);
-        }
+        
         if (gameObject.transform.position.y >= 3 || gameObject.transform.position.y <= -4)
             return;
         float newPos = gameObject.transform.position.y;
