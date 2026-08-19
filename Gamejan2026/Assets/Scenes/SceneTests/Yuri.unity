@@ -467,6 +467,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ScreenSuits
       objectReference: {fileID: 0}
+    - target: {fileID: 4357113507604040716, guid: b54c87aabe2ca99409cb674b9d0df610, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6959257732926812663, guid: b54c87aabe2ca99409cb674b9d0df610, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.67875
