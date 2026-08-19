@@ -1,34 +1,43 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PuzzleOrderManager : MonoBehaviour
 {
     public static PuzzleOrderManager Instance;
 
-    [Header("Peças do Puzzle")]
+    [System.Serializable]
+    private class SpawnedPiece
+    {
+        public Vector3 position;
+        public float radius;
+    }
+
+    [Header("Peças")]
     [SerializeField] private PuzzleDragObject[] pieces;
 
-    [Header("Área de Spawn")]
-    [SerializeField] private float horizontalPadding = 50f;
-    [SerializeField] private float verticalPadding = 50f;
-    [SerializeField] private int maxAttempts = 200;
-    [SerializeField] private float extraSpacing = 0.2f;
+    [Header("Áreas de Spawn")]
+    [SerializeField] private PuzzleSpawnArea spawnArea1;
+    [SerializeField] private PuzzleSpawnArea spawnArea2;
 
-    [Header("Área Central Proibida")]
-    [Range(0f, 0.5f)]
-    [SerializeField] private float leftLimit = 0.30f;
+    [SerializeField] private int maxAttempts = 500;
 
-    [Range(0.5f, 1f)]
-    [SerializeField] private float rightLimit = 0.70f;
-
-    [Header("Feedback de Erro")]
+    [Header("Feedback")]
     [SerializeField] private GameObject redPanel;
+    [SerializeField] private GameObject greenPanel;
     [SerializeField] private float flashDuration = 0.15f;
     [SerializeField] private int flashAmount = 2;
 
-    private Camera mainCamera;
-    private bool flashing;
+    [Header("Cena Final")]
+    [SerializeField] private string nextSceneName;
+    [SerializeField] private float waitBeforeNextScene = 3f;
+
+    private bool flashingRed;
+    private bool flashingGreen;
+    private bool puzzleCompleted;
+
+    private int finalPiecesArrived;
 
     private void Awake()
     {
@@ -39,14 +48,16 @@ public class PuzzleOrderManager : MonoBehaviour
         }
 
         Instance = this;
-        mainCamera = Camera.main;
     }
 
     private void Start()
     {
-        if (mainCamera == null)
+        if (spawnArea1 == null || spawnArea2 == null)
         {
-            Debug.LogError("Main Camera não encontrada.");
+            Debug.LogError(
+                "As duas áreas de spawn precisam ser definidas."
+            );
+
             return;
         }
 
@@ -60,18 +71,109 @@ public class PuzzleOrderManager : MonoBehaviour
         if (redPanel != null)
             redPanel.SetActive(false);
 
-        SpawnPiecesRandomly();
+        if (greenPanel != null)
+            greenPanel.SetActive(false);
+
+        SpawnPieces();
+
+        spawnArea1.DisableCollider();
+        spawnArea2.DisableCollider();
+    }
+
+    public void PieceCompleted()
+    {
+        if (puzzleCompleted)
+            return;
+
+        StartCoroutine(FlashGreen());
+
+        foreach (PuzzleDragObject piece in pieces)
+        {
+            if (piece == null)
+                continue;
+
+            if (!piece.IsCompleted)
+                return;
+        }
+
+        puzzleCompleted = true;
+
+        StartCoroutine(MovePiecesToFinal());
+    }
+
+    private IEnumerator FlashGreen()
+    {
+        if (flashingGreen)
+            yield break;
+
+        flashingGreen = true;
+
+        if (greenPanel != null)
+        {
+            greenPanel.SetActive(true);
+
+            yield return new WaitForSecondsRealtime(
+                flashDuration
+            );
+
+            greenPanel.SetActive(false);
+        }
+
+        flashingGreen = false;
+    }
+
+    private IEnumerator MovePiecesToFinal()
+    {
+        yield return new WaitForSeconds(0.1f);
+
+        finalPiecesArrived = 0;
+
+        foreach (PuzzleDragObject piece in pieces)
+        {
+            if (piece != null)
+            {
+                piece.MoveToFinalPosition();
+
+                yield return new WaitForSeconds(0.05f);
+            }
+        }
+    }
+
+    public void FinalPieceArrived()
+    {
+        finalPiecesArrived++;
+
+        if (finalPiecesArrived >= pieces.Length)
+        {
+            StartCoroutine(LoadNextScene());
+        }
+    }
+
+    private IEnumerator LoadNextScene()
+    {
+        yield return new WaitForSeconds(3f);
+
+        if (string.IsNullOrEmpty(nextSceneName))
+        {
+            Debug.LogError(
+                "Nenhuma cena foi definida em Next Scene Name."
+            );
+
+            yield break;
+        }
+
+        SceneManager.LoadScene(nextSceneName);
     }
 
     public void WrongPlacement()
     {
-        if (!flashing)
-            StartCoroutine(FlashError());
+        if (!flashingRed)
+            StartCoroutine(FlashRed());
     }
 
-    private IEnumerator FlashError()
+    private IEnumerator FlashRed()
     {
-        flashing = true;
+        flashingRed = true;
 
         if (redPanel != null)
         {
@@ -91,183 +193,97 @@ public class PuzzleOrderManager : MonoBehaviour
             }
         }
 
-        flashing = false;
+        flashingRed = false;
     }
 
-    private void SpawnPiecesRandomly()
+    private void SpawnPieces()
     {
-        if (pieces == null || pieces.Length == 0)
-            return;
-
-        List<PuzzleDragObject> spawnedPieces =
-            new List<PuzzleDragObject>();
+        List<SpawnedPiece> spawned =
+            new List<SpawnedPiece>();
 
         foreach (PuzzleDragObject piece in pieces)
         {
             if (piece == null)
                 continue;
 
-            Vector3 validPosition =
-                FindValidPosition(piece, spawnedPieces);
+            Vector3 position =
+                FindFreePosition(
+                    piece,
+                    spawned
+                );
 
-            piece.SetStartPosition(validPosition);
+            piece.SetStartPosition(position);
 
-            spawnedPieces.Add(piece);
+            spawned.Add(
+                new SpawnedPiece
+                {
+                    position = position,
+                    radius =
+                        piece.SpawnDetectionRadius
+                }
+            );
         }
     }
 
-    private Vector3 FindValidPosition(
+    private Vector3 FindFreePosition(
         PuzzleDragObject piece,
-        List<PuzzleDragObject> spawnedPieces
+        List<SpawnedPiece> spawned
     )
     {
-        Collider2D pieceCollider =
-            piece.GetComponent<Collider2D>();
-
-        for (int attempt = 0; attempt < maxAttempts; attempt++)
+        for (
+            int attempt = 0;
+            attempt < maxAttempts;
+            attempt++
+        )
         {
             Vector3 position =
-                GetRandomScreenPosition();
+                GetRandomPositionFromAreas();
 
-            if (IsPositionValid(
+            if (IsPositionFree(
                 piece,
-                pieceCollider,
                 position,
-                spawnedPieces
+                spawned
             ))
             {
                 return position;
             }
         }
 
-        Debug.LogWarning(
-            "Não foi possível encontrar uma posição livre para " +
-            piece.name +
-            ". Tente aumentar a área de spawn ou diminuir a quantidade de peças."
-        );
-
-        return GetRandomScreenPosition();
+        return GetRandomPositionFromAreas();
     }
 
-    private bool IsPositionValid(
+    private Vector3 GetRandomPositionFromAreas()
+    {
+        if (Random.value < 0.5f)
+            return spawnArea1.GetRandomPosition();
+
+        return spawnArea2.GetRandomPosition();
+    }
+
+    private bool IsPositionFree(
         PuzzleDragObject piece,
-        Collider2D pieceCollider,
         Vector3 position,
-        List<PuzzleDragObject> spawnedPieces
+        List<SpawnedPiece> spawned
     )
     {
-        if (pieceCollider == null)
+        float radius =
+            piece.SpawnDetectionRadius;
+
+        foreach (SpawnedPiece other in spawned)
         {
-            return IsPositionValidWithoutCollider(
-                position,
-                spawnedPieces
-            );
-        }
+            float requiredDistance =
+                radius + other.radius;
 
-        Vector3 originalPosition =
-            piece.transform.position;
+            float distance =
+                Vector2.Distance(
+                    position,
+                    other.position
+                );
 
-        piece.transform.position = position;
-
-        Bounds newBounds =
-            pieceCollider.bounds;
-
-        newBounds.Expand(extraSpacing);
-
-        bool valid = true;
-
-        foreach (PuzzleDragObject other in spawnedPieces)
-        {
-            if (other == null)
-                continue;
-
-            Collider2D otherCollider =
-                other.GetComponent<Collider2D>();
-
-            if (otherCollider == null)
-                continue;
-
-            Bounds otherBounds =
-                otherCollider.bounds;
-
-            otherBounds.Expand(extraSpacing);
-
-            if (newBounds.Intersects(otherBounds))
-            {
-                valid = false;
-                break;
-            }
-        }
-
-        piece.transform.position =
-            originalPosition;
-
-        return valid;
-    }
-
-    private bool IsPositionValidWithoutCollider(
-        Vector3 position,
-        List<PuzzleDragObject> spawnedPieces
-    )
-    {
-        foreach (PuzzleDragObject other in spawnedPieces)
-        {
-            if (other == null)
-                continue;
-
-            float distance = Vector3.Distance(
-                position,
-                other.transform.position
-            );
-
-            if (distance < 1f + extraSpacing)
+            if (distance < requiredDistance)
                 return false;
         }
 
         return true;
-    }
-
-    private Vector3 GetRandomScreenPosition()
-    {
-        bool spawnLeft = Random.value < 0.5f;
-
-        float screenX;
-
-        if (spawnLeft)
-        {
-            screenX = Random.Range(
-                horizontalPadding,
-                Screen.width * leftLimit
-            );
-        }
-        else
-        {
-            screenX = Random.Range(
-                Screen.width * rightLimit,
-                Screen.width - horizontalPadding
-            );
-        }
-
-        float screenY = Random.Range(
-            verticalPadding,
-            Screen.height - verticalPadding
-        );
-
-        Vector3 screenPosition = new Vector3(
-            screenX,
-            screenY,
-            Mathf.Abs(
-                mainCamera.transform.position.z
-            )
-        );
-
-        Vector3 worldPosition =
-            mainCamera.ScreenToWorldPoint(
-                screenPosition
-            );
-
-        worldPosition.z = 0f;
-
-        return worldPosition;
     }
 }
