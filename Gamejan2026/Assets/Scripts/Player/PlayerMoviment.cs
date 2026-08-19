@@ -4,17 +4,27 @@ using System.Collections;
 
 public class PlayerMoviment : MonoBehaviour
 {
+    [Header("TopDown")]
     Rigidbody2D rb;
     Vector2 movementInput;
-
     public AudioClip[] sonsDePassos;
     AudioSource audioSource;
-
     Coroutine passosCoroutine;
     bool isMoving = false;
     int passoIndex = 0;
-
     private Animator currentAnimator;
+
+    [Header("Platform")]
+   // public float moveSpeed = 5f;
+    public float jumpForce = 10f;   
+    private Animator anim;
+    private bool isGrounded;
+    public Transform groundCheck;
+    public float groundCheckRadius = 0.2f;
+    public LayerMask groundLayer;
+
+    [SerializeField] private bool isTopdown;
+    [SerializeField] private float speed = 2;
 
     void Start()
     {
@@ -33,15 +43,25 @@ public class PlayerMoviment : MonoBehaviour
     {
         if (currentAnimator == null) UpdateAnimator();
 
-        if (movementInput != Vector2.zero)
+        if (movementInput != Vector2.zero && isTopdown)
         {
             currentAnimator.SetFloat("Horizontal", movementInput.x);
             currentAnimator.SetFloat("Vertical", movementInput.y);
             currentAnimator.SetFloat("Speed", movementInput.sqrMagnitude);
         }
+        else if(movementInput != Vector2.zero && !isTopdown)
+        {
+            currentAnimator.SetFloat("Horizontal", movementInput.x);
+            currentAnimator.SetFloat("Speed", movementInput.sqrMagnitude);
+        }
         else
         {
             currentAnimator.SetFloat("Speed", 0);
+        }
+        if (!isTopdown)
+        {
+            Move();
+            Jump();
         }
     }
 
@@ -87,14 +107,58 @@ public class PlayerMoviment : MonoBehaviour
 
     private void FixedUpdate()
     {
-        float speed = 2;                
+                      
         rb.linearVelocity = movementInput * speed;
     }
+    void Move()
+    {
+        float h = Input.GetAxisRaw("Horizontal");
+        rb.linearVelocity = new Vector2(h*speed,rb.linearVelocity.y);
+       
+        if (h > 0)
+        {
+            transform.localScale = new Vector3(1, 1, 1); // Olhando para a direita
+        }
+        else if (h < 0)
+        {
+            transform.localScale = new Vector3(1, 1, 1); // Olhando para a esquerda
+        }
+        anim.SetFloat("Horizontal", h);
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {       
+        bool currentlyMoving = movementInput != Vector2.zero;
+
+        if (currentlyMoving && !isMoving)
+        {
+            isMoving = true;
+            passosCoroutine = StartCoroutine(TocarPassosEmOrdem());
+        }
+        else if (!currentlyMoving && isMoving)
+        {
+            isMoving = false;
+            if (passosCoroutine != null)
+                StopCoroutine(passosCoroutine);
+        }
+       
     }
 
+    void Jump()
+    {
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+
+        if (Input.GetButtonDown("Jump") && isGrounded)        
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);        
+
+        anim.SetBool("IsJumping", !isGrounded);
+    }
+
+    void OnDrawGizmosSelected()
+    {
+        if (groundCheck != null)
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
+        }
+    }
     public void UpdateAnimator()
     {
         foreach (Transform child in transform)
@@ -106,4 +170,5 @@ public class PlayerMoviment : MonoBehaviour
             }
         }
     }
+
 }
