@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 728ea2f50625428499311c0bba51a03e
+guid: a680f27bcdb538142b6da6589ab20694
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6668414384260245745
-    second: Trash_Plastic_Test_0
+      213: -434657267590144678
+    second: PlasticBagRiver_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,12 +46,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 200
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Trash_Plastic_Test_0
+      name: PlasticBagRiver_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 0
-        width: 62
-        height: 63
+        x: 37
+        y: 29
+        width: 60
+        height: 61
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1f8efec3d87fa8c50800000000000000
-      internalID: 6668414384260245745
+      spriteID: a5d5f3e9489c7f9f0800000000000000
+      internalID: -434657267590144678
       vertices: []
       indices: 
       edges: []
@@ -164,7 +164,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Trash_Plastic_Test_0: 6668414384260245745
+      PlasticBagRiver_0: -434657267590144678
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

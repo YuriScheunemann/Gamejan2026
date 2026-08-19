@@ -3,18 +3,18 @@ using UnityEngine;
 public class RobotPlatformController : MonoBehaviour
 {
     [Header("Movimento")]
-    [Tooltip("Velocidade horizontal do robô.")]
+    [Tooltip("Velocidade horizontal do robï¿½.")]
     public float speed = 6f;
 
-    [Tooltip("Força do pulo (valor aplicado na velocidade Y).")]
+    [Tooltip("Forï¿½a do pulo (valor aplicado na velocidade Y).")]
     public float jumpForce = 12f;
 
-    [Header("Detecção do chão")]
-    [Tooltip("Transform localizado nos pés do robô (para checar se está no chão).")]
+    [Header("Detecï¿½ï¿½o do chï¿½o")]
+    [Tooltip("Transform localizado nos pï¿½s do robï¿½ (para checar se estï¿½ no chï¿½o).")]
     public Transform groundCheck;
-    [Tooltip("Raio usado na checagem do chão.")]
+    [Tooltip("Raio usado na checagem do chï¿½o.")]
     public float groundCheckRadius = 0.12f;
-    [Tooltip("Layer(s) que representam o chão.")]
+    [Tooltip("Layer(s) que representam o chï¿½o.")]
     public LayerMask groundLayer;
 
     private Rigidbody2D rb;
@@ -46,7 +46,7 @@ public class RobotPlatformController : MonoBehaviour
             Jump();
         }
 
-        // Flip simples dependendo da direção
+        // Flip simples dependendo da direï¿½ï¿½o
         if (horizontalInput > 0.01f)
             transform.localScale = new Vector3(1f, 1f, 1f);
         else if (horizontalInput < -0.01f)
@@ -55,9 +55,9 @@ public class RobotPlatformController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Vector2 vel = rb.velocity;
+        Vector2 vel = rb.linearVelocity;
         vel.x = horizontalInput * speed;
-        rb.velocity = vel;
+        rb.linearVelocity = vel;
     }
 
     private bool IsGrounded()
@@ -74,7 +74,7 @@ public class RobotPlatformController : MonoBehaviour
 
     private void Jump()
     {
-        rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+        rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
     }
 
     private void OnDrawGizmosSelected()

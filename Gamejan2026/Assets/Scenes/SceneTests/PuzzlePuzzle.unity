@@ -1362,7 +1362,7 @@ MonoBehaviour:
   greenPanel: {fileID: 1057843270}
   flashDuration: 0.35
   flashAmount: 2
-  nextSceneName: 'cena principal '
+  nextSceneName: BoatGame
   waitBeforeNextScene: 3
 --- !u!4 &804395479
 Transform:

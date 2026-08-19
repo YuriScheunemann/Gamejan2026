@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 24ee53bbed949c2418310b5cc7985972
+guid: 5b9812776369244459da1e3f88295c94
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2003315016501909094
-    second: Trash_Metal_Test_0
+      213: 111309378742907916
+    second: RiverDirt (1)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Trash_Metal_Test_0
+      name: RiverDirt (1)_0
       rect:
         serializedVersion: 2
-        x: 16
-        y: 5
-        width: 32
-        height: 54
+        x: 476
+        y: 0
+        width: 424
+        height: 900
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6665dcbb4643dcb10800000000000000
-      internalID: 2003315016501909094
+      spriteID: c04f32c4a437b8100800000000000000
+      internalID: 111309378742907916
       vertices: []
       indices: 
       edges: []
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Trash_Metal_Test_0: 2003315016501909094
+      RiverDirt (1)_0: 111309378742907916
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
