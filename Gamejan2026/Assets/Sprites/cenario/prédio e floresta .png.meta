@@ -1,0 +1,689 @@
+fileFormatVersion: 2
+guid: 6ef85093ed735b84f9a9a71958d0e772
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2521657300065724549
+    second: "pr\xE9dio e floresta _0"
+  - first:
+      213: 8992507365852709065
+    second: "pr\xE9dio e floresta _1"
+  - first:
+      213: 8847173219873956474
+    second: "pr\xE9dio e floresta _2"
+  - first:
+      213: 4352072423654445388
+    second: "pr\xE9dio e floresta _3"
+  - first:
+      213: 5121982884861957103
+    second: "pr\xE9dio e floresta _4"
+  - first:
+      213: -4877663923726098146
+    second: "pr\xE9dio e floresta _5"
+  - first:
+      213: -6118889340986383880
+    second: "pr\xE9dio e floresta _6"
+  - first:
+      213: 6572405812816875971
+    second: "pr\xE9dio e floresta _7"
+  - first:
+      213: 466247549997185178
+    second: "pr\xE9dio e floresta _8"
+  - first:
+      213: -736644023205827667
+    second: "pr\xE9dio e floresta _9"
+  - first:
+      213: 8164406278020705720
+    second: "pr\xE9dio e floresta _10"
+  - first:
+      213: -6240674397020712111
+    second: "pr\xE9dio e floresta _11"
+  - first:
+      213: 6464772503063270880
+    second: "pr\xE9dio e floresta _12"
+  - first:
+      213: -5498970007685860993
+    second: "pr\xE9dio e floresta _13"
+  - first:
+      213: 8451309214793561863
+    second: "pr\xE9dio e floresta _14"
+  - first:
+      213: 6518154864379001622
+    second: "pr\xE9dio e floresta _15"
+  - first:
+      213: 3119002018390447715
+    second: "pr\xE9dio e floresta _16"
+  - first:
+      213: -6405057988561552008
+    second: "pr\xE9dio e floresta _17"
+  - first:
+      213: 396089976268173886
+    second: "pr\xE9dio e floresta _18"
+  - first:
+      213: -8215376840402628205
+    second: "pr\xE9dio e floresta _19"
+  - first:
+      213: 5422340307380391330
+    second: "pr\xE9dio e floresta _20"
+  - first:
+      213: 1420249211568886273
+    second: "pr\xE9dio e floresta _21"
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "pr\xE9dio e floresta _0"
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 748
+        width: 501
+        height: 827
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58820bf34f9bef220800000000000000
+      internalID: 2521657300065724549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "pr\xE9dio e floresta _1"
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 744
+        width: 1306
+        height: 846
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c00cbd0ecdcbcc70800000000000000
+      internalID: 8992507365852709065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "pr\xE9dio e floresta _2"
+      rect:
+        serializedVersion: 2
+        x: 1910
+        y: 1419
+        width: 204
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a72afec4b2977ca70800000000000000
+      internalID: 8847173219873956474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "pr\xE9dio e floresta _3"
+      rect:
+        serializedVersion: 2
+        x: 2142
+        y: 1287
+        width: 354
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4152b0afcaa56c30800000000000000
+      internalID: 4352072423654445388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "pr\xE9dio e floresta _4"
+      rect:
+        serializedVersion: 2
+        x: 1895
+        y: 1285
+        width: 232
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe3d3dddb40f41740800000000000000
+      internalID: 5121982884861957103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "pr\xE9dio e floresta _5"
+      rect:
+        serializedVersion: 2
+        x: 1927
+        y: 1121
+        width: 131
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e11619c118e0f4cb0800000000000000
+      internalID: -4877663923726098146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "pr\xE9dio e floresta _6"
+      rect:
+        serializedVersion: 2
+        x: 2121
+        y: 1127
+        width: 125
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f1259a4096551ba0800000000000000
+      internalID: -6118889340986383880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "pr\xE9dio e floresta _7"
+      rect:
+        serializedVersion: 2
+        x: 2303
+        y: 1075
+        width: 173
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c199a0c340e53b50800000000000000
+      internalID: 6572405812816875971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "pr\xE9dio e floresta _8"
+      rect:
+        serializedVersion: 2
+        x: 1893
+        y: 893
+        width: 177
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a987afa2da1787600800000000000000
+      internalID: 466247549997185178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "pr\xE9dio e floresta _9"
+      rect:
+        serializedVersion: 2
+        x: 2118
+        y: 975
+        width: 131
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dabe6eee92ae6c5f0800000000000000
+      internalID: -736644023205827667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "pr\xE9dio e floresta _10"
+      rect:
+        serializedVersion: 2
+        x: 2293
+        y: 760
+        width: 189
+        height: 293
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bda463c04ccd4170800000000000000
+      internalID: 8164406278020705720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "pr\xE9dio e floresta _11"
+      rect:
+        serializedVersion: 2
+        x: 1947
+        y: 765
+        width: 72
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15394be43bba469a0800000000000000
+      internalID: -6240674397020712111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "pr\xE9dio e floresta _12"
+      rect:
+        serializedVersion: 2
+        x: 2056
+        y: 760
+        width: 192
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e59cc6f65c77b950800000000000000
+      internalID: 6464772503063270880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "pr\xE9dio e floresta _13"
+      rect:
+        serializedVersion: 2
+        x: 2456
+        y: 759
+        width: 46
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f717b5da9ebbfa3b0800000000000000
+      internalID: -5498970007685860993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "pr\xE9dio e floresta _14"
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 112
+        width: 317
+        height: 556
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70771c234f4194570800000000000000
+      internalID: 8451309214793561863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "pr\xE9dio e floresta _15"
+      rect:
+        serializedVersion: 2
+        x: 1957
+        y: 655
+        width: 537
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61b7b428053257a50800000000000000
+      internalID: 6518154864379001622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "pr\xE9dio e floresta _16"
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 131
+        width: 420
+        height: 516
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36693ef7fcbe84b20800000000000000
+      internalID: 3119002018390447715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "pr\xE9dio e floresta _17"
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 114
+        width: 301
+        height: 427
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87db202e1b9ac17a0800000000000000
+      internalID: -6405057988561552008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "pr\xE9dio e floresta _18"
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 114
+        width: 204
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e32be8e1cb13f7500800000000000000
+      internalID: 396089976268173886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "pr\xE9dio e floresta _19"
+      rect:
+        serializedVersion: 2
+        x: 1012
+        y: 85
+        width: 879
+        height: 511
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39194d36a4e1dfd80800000000000000
+      internalID: -8215376840402628205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "pr\xE9dio e floresta _20"
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 152
+        width: 721
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2adc0b0e7c5004b40800000000000000
+      internalID: 5422340307380391330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "pr\xE9dio e floresta _21"
+      rect:
+        serializedVersion: 2
+        x: 2210
+        y: 134
+        width: 37
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1029714122db5b310800000000000000
+      internalID: 1420249211568886273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      "pr\xE9dio e floresta _0": 2521657300065724549
+      "pr\xE9dio e floresta _1": 8992507365852709065
+      "pr\xE9dio e floresta _10": 8164406278020705720
+      "pr\xE9dio e floresta _11": -6240674397020712111
+      "pr\xE9dio e floresta _12": 6464772503063270880
+      "pr\xE9dio e floresta _13": -5498970007685860993
+      "pr\xE9dio e floresta _14": 8451309214793561863
+      "pr\xE9dio e floresta _15": 6518154864379001622
+      "pr\xE9dio e floresta _16": 3119002018390447715
+      "pr\xE9dio e floresta _17": -6405057988561552008
+      "pr\xE9dio e floresta _18": 396089976268173886
+      "pr\xE9dio e floresta _19": -8215376840402628205
+      "pr\xE9dio e floresta _2": 8847173219873956474
+      "pr\xE9dio e floresta _20": 5422340307380391330
+      "pr\xE9dio e floresta _21": 1420249211568886273
+      "pr\xE9dio e floresta _3": 4352072423654445388
+      "pr\xE9dio e floresta _4": 5121982884861957103
+      "pr\xE9dio e floresta _5": -4877663923726098146
+      "pr\xE9dio e floresta _6": -6118889340986383880
+      "pr\xE9dio e floresta _7": 6572405812816875971
+      "pr\xE9dio e floresta _8": 466247549997185178
+      "pr\xE9dio e floresta _9": -736644023205827667
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

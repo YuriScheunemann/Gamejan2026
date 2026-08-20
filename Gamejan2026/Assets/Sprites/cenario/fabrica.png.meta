@@ -1,0 +1,897 @@
+fileFormatVersion: 2
+guid: 58f7f1657656acf4cb4210a628e98195
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3933911038904258016
+    second: fabrica_0
+  - first:
+      213: -526861826787682692
+    second: fabrica_1
+  - first:
+      213: -7885790040589776821
+    second: fabrica_2
+  - first:
+      213: -3199774712204130509
+    second: fabrica_3
+  - first:
+      213: -7687367625419242527
+    second: fabrica_4
+  - first:
+      213: 3431492231086080010
+    second: fabrica_5
+  - first:
+      213: -2587021824575012344
+    second: fabrica_6
+  - first:
+      213: -580955018788447649
+    second: fabrica_7
+  - first:
+      213: -8993127545454779241
+    second: fabrica_8
+  - first:
+      213: 5341974276595345118
+    second: fabrica_9
+  - first:
+      213: 4403395849589669118
+    second: fabrica_10
+  - first:
+      213: 8589098329475741323
+    second: fabrica_11
+  - first:
+      213: -4616737697217996172
+    second: fabrica_12
+  - first:
+      213: 312629744614774444
+    second: fabrica_13
+  - first:
+      213: -7115688118439423358
+    second: fabrica_14
+  - first:
+      213: 2625528855481070983
+    second: fabrica_15
+  - first:
+      213: 8660522654570725380
+    second: fabrica_16
+  - first:
+      213: -5699177387497288766
+    second: fabrica_17
+  - first:
+      213: -8490630918970632770
+    second: fabrica_18
+  - first:
+      213: -2006476751717139270
+    second: fabrica_19
+  - first:
+      213: 4991164604467572612
+    second: fabrica_20
+  - first:
+      213: -3978669273587869479
+    second: fabrica_21
+  - first:
+      213: -8221554025154412381
+    second: fabrica_22
+  - first:
+      213: -4527782021257950236
+    second: fabrica_23
+  - first:
+      213: 4753521549759102873
+    second: fabrica_24
+  - first:
+      213: -5856022881114812881
+    second: fabrica_25
+  - first:
+      213: 5730875908843772234
+    second: fabrica_26
+  - first:
+      213: 6483188715334274304
+    second: fabrica_27
+  - first:
+      213: -1253601564095770050
+    second: fabrica_28
+  - first:
+      213: 1525992755873270883
+    second: fabrica_29
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: fabrica_0
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 908
+        width: 1476
+        height: 760
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ed40e34f3f089630800000000000000
+      internalID: 3933911038904258016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fabrica_1
+      rect:
+        serializedVersion: 2
+        x: 1529
+        y: 1402
+        width: 431
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c765b90c5f530b8f0800000000000000
+      internalID: -526861826787682692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fabrica_2
+      rect:
+        serializedVersion: 2
+        x: 1989
+        y: 1354
+        width: 227
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4845512dbb009290800000000000000
+      internalID: -7885790040589776821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fabrica_3
+      rect:
+        serializedVersion: 2
+        x: 2261
+        y: 1359
+        width: 249
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3378bc53add1893d0800000000000000
+      internalID: -3199774712204130509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fabrica_4
+      rect:
+        serializedVersion: 2
+        x: 1539
+        y: 1040
+        width: 323
+        height: 321
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e34c05cfdbf05590800000000000000
+      internalID: -7687367625419242527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fabrica_5
+      rect:
+        serializedVersion: 2
+        x: 1911
+        y: 1222
+        width: 125
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a00066bd00c1f9f20800000000000000
+      internalID: 3431492231086080010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fabrica_6
+      rect:
+        serializedVersion: 2
+        x: 2053
+        y: 1208
+        width: 328
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80206007b5d091cd0800000000000000
+      internalID: -2587021824575012344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fabrica_7
+      rect:
+        serializedVersion: 2
+        x: 2403
+        y: 1132
+        width: 81
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5a52aa0d7800f7f0800000000000000
+      internalID: -580955018788447649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fabrica_8
+      rect:
+        serializedVersion: 2
+        x: 1908
+        y: 986
+        width: 110
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7942361252ef13380800000000000000
+      internalID: -8993127545454779241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fabrica_9
+      rect:
+        serializedVersion: 2
+        x: 2057
+        y: 1036
+        width: 147
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed66db33d41822a40800000000000000
+      internalID: 5341974276595345118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fabrica_10
+      rect:
+        serializedVersion: 2
+        x: 2258
+        y: 1004
+        width: 107
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efcb83ce1310c1d30800000000000000
+      internalID: 4403395849589669118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fabrica_11
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 1010
+        width: 90
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b867d457c6b923770800000000000000
+      internalID: 8589098329475741323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fabrica_12
+      rect:
+        serializedVersion: 2
+        x: 1556
+        y: 871
+        width: 93
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47a9a20668d0eefb0800000000000000
+      internalID: -4616737697217996172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fabrica_13
+      rect:
+        serializedVersion: 2
+        x: 1691
+        y: 887
+        width: 137
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca61cf9a81fa65400800000000000000
+      internalID: 312629744614774444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fabrica_14
+      rect:
+        serializedVersion: 2
+        x: 1860
+        y: 861
+        width: 406
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28253f75b5fff3d90800000000000000
+      internalID: -7115688118439423358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fabrica_15
+      rect:
+        serializedVersion: 2
+        x: 2293
+        y: 877
+        width: 86
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 785bc7a5590cf6420800000000000000
+      internalID: 2625528855481070983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fabrica_16
+      rect:
+        serializedVersion: 2
+        x: 2399
+        y: 880
+        width: 113
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40049ea087b503870800000000000000
+      internalID: 8660522654570725380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fabrica_17
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 25
+        width: 1353
+        height: 829
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cb09429c5478e0b0800000000000000
+      internalID: -5699177387497288766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fabrica_18
+      rect:
+        serializedVersion: 2
+        x: 1447
+        y: 294
+        width: 885
+        height: 498
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb59ecb1a283b2a80800000000000000
+      internalID: -8490630918970632770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fabrica_19
+      rect:
+        serializedVersion: 2
+        x: 1449
+        y: 280
+        width: 449
+        height: 421
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abcf1db66009724e0800000000000000
+      internalID: -2006476751717139270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fabrica_20
+      rect:
+        serializedVersion: 2
+        x: 2083
+        y: 607
+        width: 207
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48feac073cd244540800000000000000
+      internalID: 4991164604467572612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fabrica_21
+      rect:
+        serializedVersion: 2
+        x: 2321
+        y: 677
+        width: 160
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d89805206de8c8c0800000000000000
+      internalID: -3978669273587869479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fabrica_22
+      rect:
+        serializedVersion: 2
+        x: 2342
+        y: 286
+        width: 194
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a00dfc7c2c27ed80800000000000000
+      internalID: -8221554025154412381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fabrica_23
+      rect:
+        serializedVersion: 2
+        x: 1463
+        y: 95
+        width: 103
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4eb058aad361a21c0800000000000000
+      internalID: -4527782021257950236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fabrica_24
+      rect:
+        serializedVersion: 2
+        x: 1609
+        y: 102
+        width: 102
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99f3e8d0aa6e7f140800000000000000
+      internalID: 4753521549759102873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fabrica_25
+      rect:
+        serializedVersion: 2
+        x: 1762
+        y: 106
+        width: 189
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2e8796573a3bbea0800000000000000
+      internalID: -5856022881114812881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fabrica_26
+      rect:
+        serializedVersion: 2
+        x: 1959
+        y: 80
+        width: 302
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a491a7e8649288f40800000000000000
+      internalID: 5730875908843772234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fabrica_27
+      rect:
+        serializedVersion: 2
+        x: 2240
+        y: 89
+        width: 230
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00d025589c9e8f950800000000000000
+      internalID: 6483188715334274304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fabrica_28
+      rect:
+        serializedVersion: 2
+        x: 2448
+        y: 160
+        width: 55
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e329232f4005a9ee0800000000000000
+      internalID: -1253601564095770050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fabrica_29
+      rect:
+        serializedVersion: 2
+        x: 2477
+        y: 125
+        width: 37
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36c45af835a6d2510800000000000000
+      internalID: 1525992755873270883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      fabrica_0: 3933911038904258016
+      fabrica_1: -526861826787682692
+      fabrica_10: 4403395849589669118
+      fabrica_11: 8589098329475741323
+      fabrica_12: -4616737697217996172
+      fabrica_13: 312629744614774444
+      fabrica_14: -7115688118439423358
+      fabrica_15: 2625528855481070983
+      fabrica_16: 8660522654570725380
+      fabrica_17: -5699177387497288766
+      fabrica_18: -8490630918970632770
+      fabrica_19: -2006476751717139270
+      fabrica_2: -7885790040589776821
+      fabrica_20: 4991164604467572612
+      fabrica_21: -3978669273587869479
+      fabrica_22: -8221554025154412381
+      fabrica_23: -4527782021257950236
+      fabrica_24: 4753521549759102873
+      fabrica_25: -5856022881114812881
+      fabrica_26: 5730875908843772234
+      fabrica_27: 6483188715334274304
+      fabrica_28: -1253601564095770050
+      fabrica_29: 1525992755873270883
+      fabrica_3: -3199774712204130509
+      fabrica_4: -7687367625419242527
+      fabrica_5: 3431492231086080010
+      fabrica_6: -2587021824575012344
+      fabrica_7: -580955018788447649
+      fabrica_8: -8993127545454779241
+      fabrica_9: 5341974276595345118
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
