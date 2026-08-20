@@ -26,9 +26,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/cidade.unity
     guid: 7f68d14722cc2a14aa2df8dd46d9433c
-  - enabled: 0
-    path: Assets/Scenes/SceneTests/fabric.unity
-    guid: 5f7b767e0e2fa7e46b7ae241265f490f
   - enabled: 1
     path: Assets/Scenes/fabrica.unity
     guid: 4a01c26ad78ebdc4cbc57890bb36b12e
@@ -38,6 +35,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/fabrica2.unity
     guid: e1be82d1e035659408dff1ea5843fefc
+  - enabled: 0
+    path: Assets/Scenes/SceneTests/fabric.unity
+    guid: 5f7b767e0e2fa7e46b7ae241265f490f
+  - enabled: 1
+    path: Assets/Scenes/FinalCutScene.unity
+    guid: 0bd9510a30dcb72479414968df9a3c64
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
