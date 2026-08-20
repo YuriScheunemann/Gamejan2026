@@ -1580,15 +1580,21 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   m_text: "Programadores\nYuri Scheunemann\nBernardo Rocha de Castella Sim\xF5es\n\nGame
     Desing\nBernardo Rocha de Castella Sim\xF5es\nHeloisa oliveira konkel\n\nArtistas\nHeloisa
     oliveira konkel\nJancley de Oliveira Hermes\n\nSonoplastas\nBryan Maxmilian Schmitz\nMatteo
     de Souza Ramos\n\nRoteirista\nMatteo de Souza Ramos"
 =======
+=======
+>>>>>>> Stashed changes
   m_text: "Programadores:\nYuri Scheunemann\nBernardo\n\nGame Designs:\nBernardo
     Rocha \nHeloisa oliveira konkel\n\nArtistas:\nHeloisa oliveira konkel\nJancley
     de Oliveira Hermes\n\nSonoplastas:\nBryan Maxmilian Schmitz\nMatteo de Souza
     Ramos\n\nRoteirista:\nMatteo de Souza Ramos"
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
