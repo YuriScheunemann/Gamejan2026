@@ -35,11 +35,11 @@ public class PlatformMovimentPlayer : MonoBehaviour
         // Virar o personagem
         if (h > 0)
         {
-            transform.localScale = new Vector3(1, 1, 1); // Olhando para a direita
+            transform.localScale = new Vector3(0.2f, 0.2f, 1); // Olhando para a direita
         }
         else if (h < 0)
         {
-            transform.localScale = new Vector3(-1, 1, 1); // Olhando para a esquerda
+            transform.localScale = new Vector3(-0.2f, 0.2f, 1); // Olhando para a esquerda
         }
         // anim.SetFloat("Horizontal", h);
     }
