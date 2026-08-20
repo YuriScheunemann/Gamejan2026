@@ -1583,40 +1583,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Programadores
-
-    Yuri Scheunemann
-
-    Bernardo
-
-
-    Game Desing
-
-    Bernardo
-
-    Heloisa
-    oliveira konkel
-
-
-    Artistas
-
-    Heloisa oliveira konkel
-
-    Jancley de Oliveira
-    Hermes
-
-
-    Sonoplastas
-
-    Bryan Maxmilian Schmitz
-
-    Matteo de Souza Ramos
-
-
-    Roteirista
-
-    Matteo
-    de Souza Ramos'
+  m_text: "Programadores\nYuri Scheunemann\nBernardo Rocha de Castella Sim\xF5es\n\nGame
+    Desing\nBernardo Rocha de Castella Sim\xF5es\nHeloisa oliveira konkel\n\nArtistas\nHeloisa
+    oliveira konkel\nJancley de Oliveira Hermes\n\nSonoplastas\nBryan Maxmilian Schmitz\nMatteo
+    de Souza Ramos\n\nRoteirista\nMatteo de Souza Ramos"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
