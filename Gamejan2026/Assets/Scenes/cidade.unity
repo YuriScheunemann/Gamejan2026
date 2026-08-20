@@ -541,18 +541,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86fe9b1ed64eb2f459e3e1c7350d9250, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TapePlayer
-  audioSource: {fileID: 0}
-  tapeClip: {fileID: 8300000, guid: 9caa436a5583a914ebd01a50ed69cb9a, type: 3}
-  subtitle: "\"hoje o dia \xE9 t\xE3o azul e quente... Fui pescar hoje mais cedo,
-    e o rio estava infestado de peixe!\r\nA \xE1gua do rio estava cristalina, eu
-    podia enxergar com clareza o cardume de peixes que viam em dire\xE7\xE3o \xE0
-    isca. Trouxe uns 4kg que vai durar pra 1 semana, quem sabe eu vendo pra dona
-    Maria... Sempre recebo tapetes de croch\xEA em troca.\"\r\n"
-  subtitleTMP: {fileID: 1678763591}
-  subtitleText: {fileID: 0}
-  partDisplayDuration: 1.5
-  charRevealDelay: 0.03
-  clearOnStop: 1
 --- !u!4 &208662255
 Transform:
   m_ObjectHideFlags: 0
@@ -1285,7 +1273,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 208.69, y: 43}
+  m_AnchoredPosition: {x: -256, y: 43}
   m_SizeDelta: {x: 1422.11, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &425324452
@@ -7079,6 +7067,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4231847290821112828, guid: bf1988044311c9642bdefc23bc0f59f5, type: 3}
+      propertyPath: scaleX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4231847290821112828, guid: bf1988044311c9642bdefc23bc0f59f5, type: 3}
+      propertyPath: scaleY
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4231847290821112828, guid: bf1988044311c9642bdefc23bc0f59f5, type: 3}
       propertyPath: jumpForce
       value: 0
       objectReference: {fileID: 0}
@@ -7093,6 +7089,22 @@ PrefabInstance:
     - target: {fileID: 4752785185100362073, guid: bf1988044311c9642bdefc23bc0f59f5, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.224
+      objectReference: {fileID: 0}
+    - target: {fileID: 5273546497267343856, guid: bf1988044311c9642bdefc23bc0f59f5, type: 3}
+      propertyPath: m_Size.x
+      value: 7.83
+      objectReference: {fileID: 0}
+    - target: {fileID: 5273546497267343856, guid: bf1988044311c9642bdefc23bc0f59f5, type: 3}
+      propertyPath: m_Size.y
+      value: 9.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 5273546497267343856, guid: bf1988044311c9642bdefc23bc0f59f5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 372521323386853324, guid: 4efcc28ec1ffc584697f1025e0996688, type: 3}
+    - target: {fileID: 5273546497267343856, guid: bf1988044311c9642bdefc23bc0f59f5, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5887650494245712971, guid: bf1988044311c9642bdefc23bc0f59f5, type: 3}
       propertyPath: m_Layer
