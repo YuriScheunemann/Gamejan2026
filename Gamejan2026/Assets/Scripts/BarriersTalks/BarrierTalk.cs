@@ -7,7 +7,12 @@ public class BarrierTalk : MonoBehaviour
         if (collider.CompareTag("Player"))
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             DialogueActivation.Instance.StartDialogo();        
+=======
+            DialogueActivation.Instance.StartDialogo();
+        
+>>>>>>> Stashed changes
 =======
             DialogueActivation.Instance.StartDialogo();
         
