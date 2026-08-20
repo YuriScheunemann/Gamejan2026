@@ -2290,7 +2290,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6085eda17304d314ab25665dd3322bd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TapeCollect
-  nextSceneName: fabrica 2
+  nextSceneName: fabrica2
   delay: 2
 --- !u!212 &923314639
 SpriteRenderer:
