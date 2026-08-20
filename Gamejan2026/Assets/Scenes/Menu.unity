@@ -1060,18 +1060,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Assets de terceiros
-
-
-    Unity Store
-
-
-    OpenGameArt.Org
-
-    CleytonKauffman
-
-
-    FreeSound'
+  m_text: "Assets de terceiros\n\nUnity Store\nGWriterStudio\r\nT.C. Edwards\nFan
+    Zoo\r\nNeko Legends\n\n \nOpenGameArt.Org\nCleytonKauffman\nphoenix1291\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1560,7 +1550,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -990, y: 578}
+  m_AnchoredPosition: {x: -990, y: 636}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1132911320
@@ -1584,7 +1574,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Programadores\nYuri Scheunemann\nBernardo Rocha de Castella Sim\xF5es\n\nGame
-    Desing\nBernardo Rocha de Castella Sim\xF5es\nHeloisa oliveira konkel\n\nArtistas\nHeloisa
+    Desing\nBernardo Rocha de Castella Sim\xF5es\nHeloisa oliveira konkel\nYuri Scheunemann\n\nArtistas\nHeloisa
     oliveira konkel\nJancley de Oliveira Hermes\n\nSonoplastas\nBryan Maxmilian Schmitz\nMatteo
     de Souza Ramos\n\nRoteirista\nMatteo de Souza Ramos"
   m_isRightToLeft: 0
@@ -1613,8 +1603,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
