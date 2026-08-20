@@ -23,7 +23,6 @@ public class TapePlayerController : MonoBehaviour
     [Tooltip("Se verdadeiro, limpa a legenda ao parar o áudio.")]
     public bool clearOnStop = true;
 
-    [SerializeField] GameObject painel;
     private Coroutine subtitleRoutine;
 
     // Permite configurar fita/legenda dinamicamente (ex: ao pegar a fita)
@@ -66,7 +65,7 @@ public class TapePlayerController : MonoBehaviour
             subtitleRoutine = null;
         }
 
-        if (clearOnStop) ClearSubtitle();        
+        if (clearOnStop) ClearSubtitle();
     }
 
     private IEnumerator ShowSubtitlePartsCoroutine()
@@ -148,6 +147,5 @@ public class TapePlayerController : MonoBehaviour
     private void ClearSubtitle()
     {
         SetSubtitle(string.Empty);
-        painel.SetActive(false);
     }
 }
