@@ -12,6 +12,8 @@ public class PlatformMovimentPlayer : MonoBehaviour
     public Transform groundCheck;
     public float groundCheckRadius = 0.2f;
     public LayerMask groundLayer;
+    [SerializeField] private float scaleX;
+    [SerializeField] private float scaleY;
 
     void Start()
     {
@@ -35,11 +37,11 @@ public class PlatformMovimentPlayer : MonoBehaviour
         // Virar o personagem
         if (h > 0)
         {
-            transform.localScale = new Vector3(0.2f, 0.2f, 1); // Olhando para a direita
+            transform.localScale = new Vector3(scaleX, scaleY, 1); // Olhando para a direita
         }
         else if (h < 0)
         {
-            transform.localScale = new Vector3(-0.2f, 0.2f, 1); // Olhando para a esquerda
+            transform.localScale = new Vector3(-scaleX, scaleY, 1); // Olhando para a direita
         }
         // anim.SetFloat("Horizontal", h);
     }

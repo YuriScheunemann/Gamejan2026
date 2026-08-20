@@ -24,7 +24,7 @@ public class TapePlayerController : MonoBehaviour
     public bool clearOnStop = true;
 
     private Coroutine subtitleRoutine;
-
+    [SerializeField] GameObject painel;
     // Permite configurar fita/legenda dinamicamente (ex: ao pegar a fita)
     public void SetTape(AudioClip clip, string subtitleText)
     {
@@ -147,5 +147,6 @@ public class TapePlayerController : MonoBehaviour
     private void ClearSubtitle()
     {
         SetSubtitle(string.Empty);
+        painel.SetActive(false);
     }
 }
