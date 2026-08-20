@@ -32,6 +32,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/fabrica.unity
     guid: 4a01c26ad78ebdc4cbc57890bb36b12e
+  - enabled: 1
+    path: Assets/Scenes/SceneTests/RecycleScene.unity
+    guid: 6f52a1847a460fa4f8144977cc9818f1
+  - enabled: 1
+    path: Assets/Scenes/fabrica2.unity
+    guid: e1be82d1e035659408dff1ea5843fefc
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
