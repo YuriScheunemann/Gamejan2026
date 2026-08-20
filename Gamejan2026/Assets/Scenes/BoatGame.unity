@@ -183,7 +183,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -266,7 +266,7 @@ Transform:
   m_GameObject: {fileID: 500025612}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.63, y: -2.53, z: 0}
+  m_LocalPosition: {x: 14.745519, y: -2.53, z: 0}
   m_LocalScale: {x: 1.8839, y: 1.8839, z: 1.8839}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -313,7 +313,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ObstacleCollision
   slowMultiplier: 0.5
   slowDuration: 2
-  reactionHUD: {fileID: 0}
   playerTag: Player
 --- !u!1 &774632451
 GameObject:
@@ -1343,7 +1342,7 @@ Transform:
   m_GameObject: {fileID: 1312851848}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.664482, y: -3.0618663, z: 0}
+  m_LocalPosition: {x: 17.78, y: -3.0618663, z: 0}
   m_LocalScale: {x: 0.06587231, y: 0.06587231, z: 0.06587231}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1423,7 +1422,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -348, y: 108}
+  m_AnchoredPosition: {x: -197, y: 108}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1364470915
@@ -2051,7 +2050,7 @@ Transform:
   m_GameObject: {fileID: 1848309601}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.72059, y: -0.5380503, z: 0}
+  m_LocalPosition: {x: 17.83611, y: -0.5380503, z: 0}
   m_LocalScale: {x: 0.34593, y: 0.34593, z: 0.34593}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2267,7 +2266,7 @@ Transform:
   m_GameObject: {fileID: 1971118399}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16.25, y: -0.29, z: 0}
+  m_LocalPosition: {x: 15.365519, y: -0.29, z: 0}
   m_LocalScale: {x: 6.9574, y: 6.9574, z: 6.9574}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2314,7 +2313,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ObstacleCollision
   slowMultiplier: 0.5
   slowDuration: 2
-  reactionHUD: {fileID: 0}
   playerTag: Player
 --- !u!1 &2099769367
 GameObject:
@@ -2497,17 +2495,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.010348082, y: -0.15389156}
+  m_Offset: {x: 0.1556685, y: -0.050138474}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 18.9, y: 14.17}
+    oldSize: {x: 9.061127, y: 21.2}
     newSize: {x: 0.64, y: 0.64}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 4.166612, y: 9.701937}
+  m_Size: {x: 9.642147, y: 21.17236}
   m_EdgeRadius: 0
 --- !u!4 &2633642295121915924
 Transform:
@@ -2570,7 +2568,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.0045446265, w: 0.9999897}
   m_LocalPosition: {x: 0.24, y: -3.05, z: 0}
-  m_LocalScale: {x: 0.3757961, y: 0.2779714, z: 1}
+  m_LocalScale: {x: 0.1625745, y: 0.14129867, z: 0.43261358}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -2609,7 +2607,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.71878195, y: -0.44324565}
+  m_Offset: {x: -0.750203, y: -0.44324565}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2619,7 +2617,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 5.3867216, y: 1.8864913}
+  m_Size: {x: 5.3238773, y: 1.8864913}
   m_EdgeRadius: 0
 --- !u!114 &4959346922969912493
 MonoBehaviour:
@@ -2633,7 +2631,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5833d36be0e2c8c42b9a65aace6034ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoatMoviment
-  _sceneName: BoatGameOver
+  _sceneName: cidade
 --- !u!212 &6341588368212532271
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2681,7 +2679,7 @@ SpriteRenderer:
   m_SortingLayerID: 1536056941
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 252e84b65e23d9b4493c0a892535db94, type: 3}
+  m_Sprite: {fileID: -2495926757893852300, guid: 8916683024bc2eb438939cd151153e51, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2737,6 +2735,7 @@ MonoBehaviour:
   delayAfterTape: 2
   statusText: {fileID: 832948797}
   reactionHUD: {fileID: 1122259107}
+  sceneName: cidade
 --- !u!61 &8273839044500841591
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2819,6 +2818,7 @@ GameObject:
   - component: {fileID: 3462694301236357175}
   - component: {fileID: 4680183410783857048}
   - component: {fileID: 9216947214264841424}
+  - component: {fileID: 9216947214264841425}
   m_Layer: 0
   m_Name: ObstacleDestroyer
   m_TagString: Destroyer
@@ -2853,6 +2853,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &9216947214264841425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8750667945592146764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1137d93cfd1d91443beab6c5aeb3be96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectDestroyer
+  tagsParaDestruir:
+  - sapo
+  - fita
+  - Obstacle
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
