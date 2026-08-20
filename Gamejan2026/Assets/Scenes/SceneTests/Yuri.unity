@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 183123987}
   - component: {fileID: 183123986}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: CanvasResetbnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -214,7 +214,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1116837617}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1677983168}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -983,6 +983,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1677983168 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6959257732926812663, guid: b54c87aabe2ca99409cb674b9d0df610, type: 3}
+  m_PrefabInstance: {fileID: 3348311233781762244}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1881065284 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6023734262194846006, guid: b54c87aabe2ca99409cb674b9d0df610, type: 3}
@@ -1093,7 +1098,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 6959257732926812663, guid: b54c87aabe2ca99409cb674b9d0df610, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 183123989}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b54c87aabe2ca99409cb674b9d0df610, type: 3}
 --- !u!1001 &3539769730009292220
@@ -1291,4 +1299,3 @@ SceneRoots:
   - {fileID: 3539769730009292220}
   - {fileID: 1507283039}
   - {fileID: 3348311233781762244}
-  - {fileID: 183123989}
