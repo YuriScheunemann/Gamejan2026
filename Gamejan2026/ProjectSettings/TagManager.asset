@@ -10,6 +10,7 @@ TagManager:
   - cano
   - sapo
   - Load
+  - fita
   layers:
   - Default
   - TransparentFX

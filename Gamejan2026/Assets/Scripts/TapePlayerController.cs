@@ -1,10 +1,10 @@
 using System;
 using System.Collections;
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
+using UnityEngine.UI;
 
-public class TapePlayer : MonoBehaviour
+public class TapePlayerController : MonoBehaviour
 {
     [Header("Áudio")]
     public AudioSource audioSource;
@@ -25,7 +25,16 @@ public class TapePlayer : MonoBehaviour
 
     private Coroutine subtitleRoutine;
 
-    public void OnPlayTapeButton()
+    // Permite configurar fita/legenda dinamicamente (ex: ao pegar a fita)
+    public void SetTape(AudioClip clip, string subtitleText)
+    {
+        tapeClip = clip;
+        subtitle = subtitleText ?? string.Empty;
+    }
+
+    public bool IsPlaying => audioSource != null && audioSource.isPlaying;
+
+    public void PlayTape()
     {
         if (tapeClip == null)
         {
@@ -45,7 +54,7 @@ public class TapePlayer : MonoBehaviour
         subtitleRoutine = StartCoroutine(ShowSubtitlePartsCoroutine());
     }
 
-    public void OnStopTapeButton()
+    public void StopTape()
     {
         if (audioSource != null && audioSource.isPlaying)
             audioSource.Stop();
@@ -67,7 +76,6 @@ public class TapePlayer : MonoBehaviour
 
         foreach (var line in rawParts)
         {
-            // further split by sentence terminators keeping them
             int start = 0;
             for (int i = 0; i < line.Length; i++)
             {
@@ -82,7 +90,6 @@ public class TapePlayer : MonoBehaviour
                     }
                 }
             }
-            // remaining
             if (start < line.Length)
             {
                 string rem = line.Substring(start).Trim();
@@ -99,13 +106,12 @@ public class TapePlayer : MonoBehaviour
 
         for (int p = 0; p < partsList.Count; p++)
         {
-            // Se o áudio parou ou estourou o tempo, encerra
             if (audioSource == null || !audioSource.isPlaying || (Time.time - startTime) > audioLength)
                 break;
 
             string part = partsList[p];
             yield return StartCoroutine(TypewriterShow(part));
-            // aguarda partDisplayDuration ou até o áudio terminar
+
             float t = 0f;
             while (t < partDisplayDuration)
             {
@@ -113,10 +119,8 @@ public class TapePlayer : MonoBehaviour
                 t += Time.deltaTime;
                 yield return null;
             }
-            // substitui pela próxima parte (não acumula)
         }
 
-        // Ao final, limpa a legenda
         ClearSubtitle();
         subtitleRoutine = null;
     }
@@ -127,8 +131,9 @@ public class TapePlayer : MonoBehaviour
 
         for (int i = 0; i < text.Length; i++)
         {
-            if (subtitleTMP != null) subtitleTMP.text = text.Substring(0, i + 1);
-            if (subtitleText != null) subtitleText.text = text.Substring(0, i + 1);
+            string sub = text.Substring(0, i + 1);
+            if (subtitleTMP != null) subtitleTMP.text = sub;
+            if (subtitleText != null) subtitleText.text = sub;
             yield return new WaitForSeconds(charRevealDelay);
         }
     }

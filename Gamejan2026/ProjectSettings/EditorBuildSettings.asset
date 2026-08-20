@@ -20,12 +20,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/cidade.unity
     guid: 7f68d14722cc2a14aa2df8dd46d9433c
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SceneTests/fabric.unity
     guid: 5f7b767e0e2fa7e46b7ae241265f490f
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/fabrica.unity
     guid: 4a01c26ad78ebdc4cbc57890bb36b12e
+  - enabled: 1
+    path: Assets/Scenes/floresta.unity
+    guid: 943b32879963bd74a9b8635460c66239
+  - enabled: 1
+    path: Assets/Scenes/cena inicial.unity
+    guid: 807ae9e629e631c419d8a1e5da28db3a
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
