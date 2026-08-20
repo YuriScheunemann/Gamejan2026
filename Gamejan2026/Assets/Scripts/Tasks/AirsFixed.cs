@@ -9,6 +9,7 @@ public class AirsFixed : MonoBehaviour
   public void TaskAtualization(int airDone)
     {
         airsFixed += airDone;
+        print(airsFixed);
        airsTask.text = ("Ares-condicionados consertados: " + airDone + "/ 3" );
         if(airsFixed == 3)
             taskCompleted.Invoke();
