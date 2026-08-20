@@ -164,7 +164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d44512af3dbc67544b372e7d4a96982f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LoadSceneOnCollision
-  sceneToLoad: cidade
+  sceneToLoad: BoatGame
   playerTag: Player
   checkBuildSettings: 1
 --- !u!61 &125633118
