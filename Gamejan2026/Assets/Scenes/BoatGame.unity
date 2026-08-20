@@ -131,8 +131,8 @@ GameObject:
   - component: {fileID: 500025615}
   - component: {fileID: 500025617}
   - component: {fileID: 500025614}
-  - component: {fileID: 500025618}
   - component: {fileID: 500025613}
+  - component: {fileID: 500025618}
   m_Layer: 0
   m_Name: PlasticBagRiver
   m_TagString: Untagged
@@ -308,11 +308,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 500025612}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef6ae4a37a64a8442b1c2816132a6461, type: 3}
+  m_Script: {fileID: 11500000, guid: fe592cf3b76e3ae4d949a772c3e027cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObstacleCollision
   _sceneName: 
-  obstacleIndex: 0
+  obstacleIndex: 1
 --- !u!1 &774632451
 GameObject:
   m_ObjectHideFlags: 0
@@ -1918,9 +1918,9 @@ GameObject:
   - component: {fileID: 1971118404}
   - component: {fileID: 1971118403}
   - component: {fileID: 1971118402}
-  - component: {fileID: 1971118401}
   - component: {fileID: 1971118400}
   - component: {fileID: 1971118405}
+  - component: {fileID: 1971118406}
   m_Layer: 0
   m_Name: TrashRiver
   m_TagString: Untagged
@@ -1941,20 +1941,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObstacleMovement
   speed: 1.5
---- !u!114 &1971118401
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1971118399}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef6ae4a37a64a8442b1c2816132a6461, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ObstacleCollision
-  _sceneName: 
-  obstacleIndex: 0
 --- !u!58 &1971118402
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2058,7 +2044,7 @@ Transform:
   m_GameObject: {fileID: 1971118399}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.69, y: -0.45, z: 0}
+  m_LocalPosition: {x: 16.25, y: -0.29, z: 0}
   m_LocalScale: {x: 6.9574, y: 6.9574, z: 6.9574}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2091,6 +2077,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1971118406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1971118399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe592cf3b76e3ae4d949a772c3e027cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObstacleCollision
+  _sceneName: 
+  obstacleIndex: 2
 --- !u!1 &2099769367
 GameObject:
   m_ObjectHideFlags: 0
@@ -2229,8 +2229,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2633642295121915924}
-  - component: {fileID: 8273839044500841590}
   - component: {fileID: 8273839044500841591}
+  - component: {fileID: 8273839044500841592}
   m_Layer: 0
   m_Name: ObstaclesSpawner
   m_TagString: Untagged
@@ -2512,28 +2512,6 @@ MonoBehaviour:
   tapeTag: fita
   delayAfterTape: 2
   statusText: {fileID: 832948797}
---- !u!114 &8273839044500841590
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 328941995700511130}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c8729c1d1ccf5844bb7dc1cc2e42454, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ObstacleSpawner
-  verticalRange: 0
-  leftRange: 0
-  rightRange: 0
-  obstacleObjects:
-  - {fileID: 1971118399}
-  - {fileID: 500025612}
-  spawnRate: 2
-  spawnCaneTime: 0
-  spawnRateCane: 0
-  caneObjects: {fileID: 0}
 --- !u!61 &8273839044500841591
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2580,6 +2558,28 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 10.801118, y: 1.2261605}
   m_EdgeRadius: 0
+--- !u!114 &8273839044500841592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 328941995700511130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 364fe34a153e4fe45b9b1d64437e8e28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObstacleSpawner
+  verticalRange: 0
+  leftRange: -8
+  rightRange: 8
+  obstacleObjects:
+  - {fileID: 1971118399}
+  - {fileID: 500025612}
+  spawnRate: 0.8
+  spawnCaneTime: 0
+  spawnRateCane: 1
+  caneObjects: {fileID: 0}
 --- !u!1 &8750667945592146764
 GameObject:
   m_ObjectHideFlags: 0
