@@ -191,7 +191,7 @@ SpriteRenderer:
   m_Size: {x: 7.52, y: 9.18}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &193834354
@@ -1602,20 +1602,21 @@ MonoBehaviour:
 
     Heloisa oliveira konkel
 
-    Janclay
+    Jancley de Oliveira
+    Hermes
 
 
     Sonoplastas
 
-    Bryan
-    Maxmilian Schmitz
+    Bryan Maxmilian Schmitz
 
-    Matteo
+    Matteo de Souza Ramos
 
 
     Roteirista
 
-    Matteo'
+    Matteo
+    de Souza Ramos'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
