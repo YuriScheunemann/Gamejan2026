@@ -17,32 +17,80 @@ public class ReactionHUD : MonoBehaviour
 
     private Coroutine reactionCoroutine;
 
-    private void Start()
+    private void Awake()
     {
-        if (reactionImage != null)
+        if (reactionImage == null)
         {
-            reactionImage.sprite = normalSprite;
+            Debug.LogError(
+                "ReactionHUD: Reaction Image não foi atribuída!"
+            );
+
+            return;
         }
+
+        if (normalSprite == null)
+        {
+            Debug.LogWarning(
+                "ReactionHUD: Normal Sprite não foi atribuído."
+            );
+        }
+
+        if (goodSprite == null)
+        {
+            Debug.LogWarning(
+                "ReactionHUD: Good Sprite não foi atribuído."
+            );
+        }
+
+        if (badSprite == null)
+        {
+            Debug.LogWarning(
+                "ReactionHUD: Bad Sprite não foi atribuído."
+            );
+        }
+
+        reactionImage.gameObject.SetActive(true);
+        reactionImage.sprite = normalSprite;
     }
 
     public void ShowGood()
     {
+        Debug.Log("ReactionHUD: SHOW GOOD");
+
         ShowReaction(goodSprite);
     }
 
     public void ShowBad()
     {
+        Debug.Log("ReactionHUD: SHOW BAD");
+
         ShowReaction(badSprite);
     }
 
     private void ShowReaction(Sprite reactionSprite)
     {
         if (reactionImage == null)
+        {
+            Debug.LogError(
+                "ReactionHUD: Reaction Image está nula."
+            );
+
             return;
+        }
 
         if (reactionSprite == null)
-            return;
+        {
+            Debug.LogError(
+                "ReactionHUD: O sprite da reação está nulo."
+            );
 
+            return;
+        }
+
+        // Garante que a imagem esteja ativa.
+        reactionImage.gameObject.SetActive(true);
+
+        // Cancela uma reação anterior.
         if (reactionCoroutine != null)
         {
             StopCoroutine(reactionCoroutine);
@@ -57,9 +105,14 @@ public class ReactionHUD : MonoBehaviour
     {
         reactionImage.sprite = reactionSprite;
 
-        yield return new WaitForSeconds(reactionDuration);
+        yield return new WaitForSeconds(
+            reactionDuration
+        );
 
-        reactionImage.sprite = normalSprite;
+        if (reactionImage != null)
+        {
+            reactionImage.sprite = normalSprite;
+        }
 
         reactionCoroutine = null;
     }

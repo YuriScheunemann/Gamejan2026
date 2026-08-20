@@ -13,19 +13,23 @@ public class ObstacleMovement : MonoBehaviour
     {
         velocidadeAtual = speed;
 
-        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        Rigidbody2D rb =
+            GetComponent<Rigidbody2D>();
 
         if (rb != null)
         {
             rb.gravityScale = 0f;
-            rb.bodyType = RigidbodyType2D.Kinematic;
+            rb.bodyType =
+                RigidbodyType2D.Kinematic;
         }
     }
 
     private void Update()
     {
         transform.Translate(
-            Vector2.down * velocidadeAtual * Time.deltaTime,
+            Vector2.down *
+            velocidadeAtual *
+            Time.deltaTime,
             Space.World
         );
     }
@@ -36,31 +40,47 @@ public class ObstacleMovement : MonoBehaviour
         velocidadeAtual = newSpeed;
     }
 
-    public void SlowDown(float multiplier, float duration)
+    public void SlowDown(
+        float multiplier,
+        float duration)
     {
         if (slowdownCoroutine != null)
         {
-            StopCoroutine(slowdownCoroutine);
+            StopCoroutine(
+                slowdownCoroutine
+            );
         }
 
-        slowdownCoroutine = StartCoroutine(
-            SlowdownRoutine(multiplier, duration)
-        );
+        slowdownCoroutine =
+            StartCoroutine(
+                SlowdownRoutine(
+                    multiplier,
+                    duration
+                )
+            );
     }
 
     private IEnumerator SlowdownRoutine(
         float multiplier,
         float duration)
     {
-        float velocidadeOriginal = velocidadeAtual;
+        float velocidadeOriginal =
+            speed;
 
         velocidadeAtual =
             velocidadeOriginal * multiplier;
 
-        yield return new WaitForSeconds(duration);
+        yield return new WaitForSeconds(
+            duration
+        );
 
-        velocidadeAtual = velocidadeOriginal;
+        velocidadeAtual =
+            velocidadeOriginal;
 
         slowdownCoroutine = null;
+    }
+    public float GetSpeed()
+    {
+        return velocidadeAtual;
     }
 }

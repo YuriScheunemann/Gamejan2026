@@ -4,9 +4,6 @@ using UnityEngine.SceneManagement;
 
 public class TurtleCollector : MonoBehaviour
 {
-    [Header("HUD")]
-    [SerializeField] private ReactionHUD reactionHUD;
-
     [Header("Sapos")]
     [SerializeField] private string collectibleTag = "sapo";
     [SerializeField] private int requiredCount = 5;
@@ -18,22 +15,52 @@ public class TurtleCollector : MonoBehaviour
     [Header("UI")]
     [SerializeField] private TMP_Text statusText;
 
+    [Header("Reação da Tartaruga")]
+    [SerializeField] private ReactionHUD reactionHUD;
+
+    [Header("Cena após coletar a fita")]
+    [SerializeField] private string sceneName;
+
     private int collectedCount = 0;
     private bool canCollectTape = false;
     private bool collectingTape = false;
 
-    // Permite que o ObstacleSpawner saiba se a fita já foi liberada
     public bool CanSpawnTape => canCollectTape;
 
     private void Start()
     {
         UpdateUI();
+
+        if (reactionHUD == null)
+        {
+            Debug.LogError(
+                "TurtleCollector: ReactionHUD não foi atribuído no Inspector!"
+            );
+        }
     }
 
     private void CollectFrog(GameObject frog)
     {
-        reactionHUD?.ShowGood();
+        if (canCollectTape)
+            return;
+
         collectedCount++;
+
+        Debug.Log(
+            $"TurtleCollector: Sapo coletado! " +
+            $"{collectedCount}/{requiredCount}"
+        );
+
+        if (reactionHUD != null)
+        {
+            reactionHUD.ShowGood();
+        }
+        else
+        {
+            Debug.LogError(
+                "TurtleCollector: ReactionHUD está nulo!"
+            );
+        }
 
         Destroy(frog);
 
@@ -41,10 +68,12 @@ public class TurtleCollector : MonoBehaviour
         {
             collectedCount = requiredCount;
 
-            // Libera o spawn da fita
             canCollectTape = true;
 
-            Debug.Log("5 sapos coletados! A fita foi liberada.");
+            Debug.Log(
+                "Todos os sapos foram coletados! " +
+                "A fita foi liberada."
+            );
         }
 
         UpdateUI();
@@ -62,17 +91,30 @@ public class TurtleCollector : MonoBehaviour
 
         Destroy(tape);
 
-        Debug.Log("Fita coletada! Mudando de cena em 2 segundos.");
+        Debug.Log(
+            "Fita coletada! Mudando de cena em 2 segundos."
+        );
 
-        Invoke(nameof(ChangeScene), delayAfterTape);
+        UpdateUI();
+
+        Invoke(
+            nameof(ChangeScene),
+            delayAfterTape
+        );
     }
 
     private void ChangeScene()
     {
-        int proximaCena =
-            SceneManager.GetActiveScene().buildIndex + 1;
+        if (string.IsNullOrEmpty(sceneName))
+        {
+            Debug.LogError(
+                "TurtleCollector: Nome da cena não foi definido!"
+            );
 
-        SceneManager.LoadScene(proximaCena);
+            return;
+        }
+
+        SceneManager.LoadScene(sceneName);
     }
 
     private void UpdateUI()
@@ -85,10 +127,15 @@ public class TurtleCollector : MonoBehaviour
             statusText.text =
                 $"Sapos: {collectedCount}/{requiredCount}";
         }
-        else
+        else if (!collectingTape)
         {
             statusText.text =
                 "Encontre a fita cassete!";
+        }
+        else
+        {
+            statusText.text =
+                "Fita coletada!";
         }
     }
 

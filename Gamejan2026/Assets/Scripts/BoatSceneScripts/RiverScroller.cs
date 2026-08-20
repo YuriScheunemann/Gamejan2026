@@ -20,7 +20,8 @@ public class RiverScroller : MonoBehaviour
         public Transform[] referencias;
 
         [HideInInspector]
-        public List<Transform> sprites = new List<Transform>();
+        public List<Transform> sprites =
+            new List<Transform>();
     }
 
     [Header("Velocidade")]
@@ -37,11 +38,13 @@ public class RiverScroller : MonoBehaviour
 
     private void Start()
     {
-        velocidadeAtual = velocidadeDoCenario;
+        velocidadeAtual =
+            velocidadeDoCenario;
 
         if (cameraPrincipal == null)
         {
-            cameraPrincipal = Camera.main;
+            cameraPrincipal =
+                Camera.main;
         }
 
         InicializarCamadas();
@@ -51,17 +54,23 @@ public class RiverScroller : MonoBehaviour
 
     private void Update()
     {
-        foreach (ParallaxLayer camada in camadas)
+        foreach (
+            ParallaxLayer camada
+            in camadas)
         {
             MoverCamada(camada);
             VerificarSpawn(camada);
-            DestruirSpritesForaDaTela(camada);
+            DestruirSpritesForaDaTela(
+                camada
+            );
         }
     }
 
     private void InicializarCamadas()
     {
-        foreach (ParallaxLayer camada in camadas)
+        foreach (
+            ParallaxLayer camada
+            in camadas)
         {
             if (camada.prefab == null)
             {
@@ -72,34 +81,46 @@ public class RiverScroller : MonoBehaviour
                 continue;
             }
 
-            float altura = ObterAltura(camada.prefab);
+            float altura =
+                ObterAltura(
+                    camada.prefab
+                );
 
             float primeiraPosicaoY =
-                cameraPrincipal.transform.position.y -
-                cameraPrincipal.orthographicSize -
+                cameraPrincipal.transform.position.y
+                -
+                cameraPrincipal.orthographicSize
+                -
                 altura;
 
-            for (int i = 0; i < camada.quantidadeInicial; i++)
+            for (
+                int i = 0;
+                i < camada.quantidadeInicial;
+                i++)
             {
-                Vector3 posicao = new Vector3(
-                    camada.prefab.transform.position.x,
-                    primeiraPosicaoY + (altura * i),
-                    camada.prefab.transform.position.z
-                );
+                Vector3 posicao =
+                    new Vector3(
+                        camada.prefab.transform.position.x,
+                        primeiraPosicaoY +
+                        (altura * i),
+                        camada.prefab.transform.position.z
+                    );
 
-                GameObject novoSprite = Instantiate(
-                    camada.prefab,
-                    posicao,
-                    Quaternion.identity,
-                    transform
-                );
+                GameObject novoSprite =
+                    Instantiate(
+                        camada.prefab,
+                        posicao,
+                        Quaternion.identity,
+                        transform
+                    );
 
-                camada.sprites.Add(novoSprite.transform);
+                camada.sprites.Add(
+                    novoSprite.transform
+                );
             }
         }
     }
 
- 
     private void MoverCamada(ParallaxLayer camada)
     {
         float velocidade =
@@ -118,30 +139,32 @@ public class RiverScroller : MonoBehaviour
         }
     }
 
-   
-
-    private void VerificarSpawn(ParallaxLayer camada)
+    private void VerificarSpawn(
+        ParallaxLayer camada)
     {
         if (camada.sprites.Count == 0)
             return;
 
         Transform spriteMaisAlto =
-            ObterSpriteMaisAlto(camada);
+            ObterSpriteMaisAlto(
+                camada
+            );
 
         if (spriteMaisAlto == null)
             return;
 
         float altura =
-            ObterAltura(spriteMaisAlto.gameObject);
+            ObterAltura(
+                spriteMaisAlto.gameObject
+            );
 
         float limiteSpawn =
             cameraPrincipal.transform.position.y +
             cameraPrincipal.orthographicSize +
             altura;
 
-        // Quando o sprite mais alto chega perto do topo,
-        // cria outro sprite acima dele.
-        if (spriteMaisAlto.position.y <= limiteSpawn)
+        if (spriteMaisAlto.position.y <=
+            limiteSpawn)
         {
             CriarNovoSprite(
                 camada,
@@ -156,27 +179,37 @@ public class RiverScroller : MonoBehaviour
         Transform spriteMaisAlto,
         float altura)
     {
-        Vector3 novaPosicao = new Vector3(
-            camada.prefab.transform.position.x,
-            spriteMaisAlto.position.y + altura,
-            camada.prefab.transform.position.z
-        );
+        Vector3 novaPosicao =
+            new Vector3(
+                camada.prefab.transform.position.x,
+                spriteMaisAlto.position.y +
+                altura,
+                camada.prefab.transform.position.z
+            );
 
-        GameObject novoSprite = Instantiate(
-            camada.prefab,
-            novaPosicao,
-            Quaternion.identity,
-            transform
-        );
+        GameObject novoSprite =
+            Instantiate(
+                camada.prefab,
+                novaPosicao,
+                Quaternion.identity,
+                transform
+            );
 
-        camada.sprites.Add(novoSprite.transform);
+        camada.sprites.Add(
+            novoSprite.transform
+        );
     }
+
     private void DestruirSpritesForaDaTela(
         ParallaxLayer camada)
     {
-        for (int i = camada.sprites.Count - 1; i >= 0; i--)
+        for (
+            int i = camada.sprites.Count - 1;
+            i >= 0;
+            i--)
         {
-            Transform sprite = camada.sprites[i];
+            Transform sprite =
+                camada.sprites[i];
 
             if (sprite == null)
             {
@@ -185,53 +218,65 @@ public class RiverScroller : MonoBehaviour
             }
 
             float altura =
-                ObterAltura(sprite.gameObject);
+                ObterAltura(
+                    sprite.gameObject
+                );
 
             float limiteInferior =
                 cameraPrincipal.transform.position.y -
                 cameraPrincipal.orthographicSize -
                 altura;
 
-            if (sprite.position.y < limiteInferior)
+            if (sprite.position.y <
+                limiteInferior)
             {
                 camada.sprites.RemoveAt(i);
 
-                Destroy(sprite.gameObject);
+                Destroy(
+                    sprite.gameObject
+                );
             }
         }
     }
 
     private void DesativarReferencias()
     {
-        foreach (ParallaxLayer camada in camadas)
+        foreach (
+            ParallaxLayer camada
+            in camadas)
         {
             if (camada.referencias == null)
                 continue;
 
-            foreach (Transform referencia in camada.referencias)
+            foreach (
+                Transform referencia
+                in camada.referencias)
             {
                 if (referencia != null)
                 {
-                    referencia.gameObject.SetActive(false);
+                    referencia.gameObject.SetActive(
+                        false
+                    );
                 }
             }
         }
     }
-
-
 
     private Transform ObterSpriteMaisAlto(
         ParallaxLayer camada)
     {
         Transform maisAlto = null;
 
-        foreach (Transform sprite in camada.sprites)
+        foreach (
+            Transform sprite
+            in camada.sprites)
         {
             if (sprite == null)
                 continue;
 
             if (maisAlto == null ||
-                sprite.position.y > maisAlto.position.y)
+                sprite.position.y >
+                maisAlto.position.y)
             {
                 maisAlto = sprite;
             }
@@ -240,7 +285,8 @@ public class RiverScroller : MonoBehaviour
         return maisAlto;
     }
 
-    private float ObterAltura(GameObject objeto)
+    private float ObterAltura(
+        GameObject objeto)
     {
         SpriteRenderer renderer =
             objeto.GetComponent<SpriteRenderer>();
@@ -253,11 +299,9 @@ public class RiverScroller : MonoBehaviour
         return 1f;
     }
 
-    
-
     public void SlowDown(
-        float multiplier,
-        float duration)
+     float multiplier,
+     float duration)
     {
         if (slowdownCoroutine != null)
         {

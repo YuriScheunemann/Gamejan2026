@@ -1,9 +1,7 @@
-using System.Collections;
 using UnityEngine;
 
 public class SlowdownOnCollision : MonoBehaviour
 {
-
     [Header("HUD")]
     [SerializeField] private ReactionHUD reactionHUD;
 
@@ -18,7 +16,8 @@ public class SlowdownOnCollision : MonoBehaviour
 
     private void Start()
     {
-        riverScroller = FindFirstObjectByType<RiverScroller>();
+        riverScroller =
+            FindFirstObjectByType<RiverScroller>();
 
         if (riverScroller == null)
         {
@@ -26,19 +25,58 @@ public class SlowdownOnCollision : MonoBehaviour
                 "SlowdownOnCollision: RiverScroller não encontrado."
             );
         }
+
+        if (reactionHUD == null)
+        {
+            Debug.LogError(
+                "SlowdownOnCollision: ReactionHUD " +
+                "não foi atribuído no Inspector!"
+            );
+        }
     }
 
     private void HandleSlow()
     {
-        if (riverScroller == null)
-            return;
-
-        reactionHUD?.ShowBad();
-
-        riverScroller.SlowDown(
-            slowMultiplier,
-            duration
+        Debug.Log(
+            "SlowdownOnCollision: Objeto atingiu o player!"
         );
+
+        if (reactionHUD != null)
+        {
+            reactionHUD.ShowBad();
+        }
+        else
+        {
+            Debug.LogError(
+                "SlowdownOnCollision: ReactionHUD está nulo!"
+            );
+        }
+
+        if (riverScroller != null)
+        {
+            riverScroller.SlowDown(
+                slowMultiplier,
+                duration
+            );
+        }
+
+        // Desacelera todos os objetos que possuem
+        // ObstacleMovement.
+        ObstacleMovement[] obstacles =
+            FindObjectsByType<ObstacleMovement>(
+                FindObjectsSortMode.None
+            );
+
+        foreach (ObstacleMovement obstacle in obstacles)
+        {
+            if (obstacle != null)
+            {
+                obstacle.SlowDown(
+                    slowMultiplier,
+                    duration
+                );
+            }
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
