@@ -9,6 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 84b151c5cf53da14cb459360852c79b7
   - enabled: 1
+    path: Assets/Scenes/cena inicial.unity
+    guid: 807ae9e629e631c419d8a1e5da28db3a
+  - enabled: 1
+    path: Assets/Scenes/floresta.unity
+    guid: 943b32879963bd74a9b8635460c66239
+  - enabled: 1
     path: Assets/Scenes/BoatGame.unity
     guid: 3185db0ddbd3b2d44ac1b7fec7149cd6
   - enabled: 1
@@ -26,12 +32,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/fabrica.unity
     guid: 4a01c26ad78ebdc4cbc57890bb36b12e
-  - enabled: 1
-    path: Assets/Scenes/floresta.unity
-    guid: 943b32879963bd74a9b8635460c66239
-  - enabled: 1
-    path: Assets/Scenes/cena inicial.unity
-    guid: 807ae9e629e631c419d8a1e5da28db3a
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
